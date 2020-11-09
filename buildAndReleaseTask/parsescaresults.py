@@ -33,7 +33,7 @@ def parse_sca_json(data: Dict, min_cvss: int) -> List[Dict]:
             if min_cvss > vuln["cvssScore"]:
                 pass
             else:
-                # A vulnerability can have more than one library listed which is tracked n times.
+                # A vulnerability can have more than one library listed which is tracked x times.
                 # ajv is an example where it is two different vulnerable versions (with the same
                 # vulnerability) but two different modules in a project are using it.
                 for library in vuln["libraries"]:
@@ -43,10 +43,10 @@ def parse_sca_json(data: Dict, min_cvss: int) -> List[Dict]:
                     result_dict["CVSS"] = vuln['cvssScore']
                     result_dict["Language"] = vuln['language']
                     for key, value in vuln["libraries"][0]["details"][0].items():
-                        if key == 'updateToVersion':
+                        if key == "updateToVersion":
                             result_dict["Upgrade to Version"] = value
 
-                    for ref, value in vuln["libraries"][0]["_links"].items():
+                    for ref, value in library["_links"].items():
                         # This gets the ref value
                         library = value.split("/")[4]
                         version = value.split("/")[6]
