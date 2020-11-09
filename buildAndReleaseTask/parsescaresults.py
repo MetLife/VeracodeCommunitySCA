@@ -80,7 +80,7 @@ def write_output(target: str, results: list) -> None:
     for result in results:
         if result != {"Results": "No vulnerabilities."}:
             test_case = TestCase(result["Vulnerable Library"])
-            test_case.name = (result["Vulnerable Library"] + " - " + result["Vulnerability"] + " - " + result["CVSS"])
+            test_case.name = (result["Vulnerable Library"] + " - " + result["Vulnerability"] + " - " + str(result["CVSS"]))
             test_case.result = Failure(result)
         else:
             test_case = TestCase("No vulnerabilities")
