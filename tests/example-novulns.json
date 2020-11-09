@@ -1,0 +1,625 @@
+{
+  "metadata" : {
+    "requestDate" : "2020-10-15T14:35:11.266+0000"
+  },
+  "records" : [ {
+    "metadata" : {
+      "recordType" : "SCAN",
+      "report" : "https://sca.analysiscenter.veracode.com/teams/D77HdZj/scans/19624422"
+    },
+    "graphs" : [ {
+      "coords" : {
+        "coordinateType" : "PYPI",
+        "coordinate1" : "<undefined>",
+        "coordinate2" : null,
+        "version" : "<undefined>",
+        "scope" : null,
+        "platform" : null,
+        "commitHash" : null
+      },
+      "directs" : [ {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "cryptography",
+          "coordinate2" : null,
+          "version" : "3.1",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ {
+          "coords" : {
+            "coordinateType" : "PYPI",
+            "coordinate1" : "six",
+            "coordinate2" : null,
+            "version" : "1.15.0",
+            "scope" : null,
+            "platform" : null,
+            "commitHash" : null
+          },
+          "directs" : [ ],
+          "filename" : "requirements.txt",
+          "lineNumber" : null,
+          "moduleName" : null,
+          "sha1" : null,
+          "sha2" : null,
+          "bytecodeHash" : null
+        }, {
+          "coords" : {
+            "coordinateType" : "PYPI",
+            "coordinate1" : "cffi",
+            "coordinate2" : null,
+            "version" : "1.14.3",
+            "scope" : null,
+            "platform" : null,
+            "commitHash" : null
+          },
+          "directs" : [ {
+            "coords" : {
+              "coordinateType" : "PYPI",
+              "coordinate1" : "pycparser",
+              "coordinate2" : null,
+              "version" : "2.20",
+              "scope" : null,
+              "platform" : null,
+              "commitHash" : null
+            },
+            "directs" : [ ],
+            "filename" : "requirements.txt",
+            "lineNumber" : null,
+            "moduleName" : null,
+            "sha1" : null,
+            "sha2" : null,
+            "bytecodeHash" : null
+          } ],
+          "filename" : "requirements.txt",
+          "lineNumber" : null,
+          "moduleName" : null,
+          "sha1" : null,
+          "sha2" : null,
+          "bytecodeHash" : null
+        } ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 1,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      }, {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "nassl",
+          "coordinate2" : null,
+          "version" : "3.0.0",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 2,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      }, {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "validators",
+          "coordinate2" : null,
+          "version" : "0.18.0",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ {
+          "coords" : {
+            "coordinateType" : "PYPI",
+            "coordinate1" : "decorator",
+            "coordinate2" : null,
+            "version" : "4.4.2",
+            "scope" : null,
+            "platform" : null,
+            "commitHash" : null
+          },
+          "directs" : [ ],
+          "filename" : "requirements.txt",
+          "lineNumber" : null,
+          "moduleName" : null,
+          "sha1" : null,
+          "sha2" : null,
+          "bytecodeHash" : null
+        } ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 4,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      }, {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "requests",
+          "coordinate2" : null,
+          "version" : "2.24.0",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ {
+          "coords" : {
+            "coordinateType" : "PYPI",
+            "coordinate1" : "chardet",
+            "coordinate2" : null,
+            "version" : "3.0.4",
+            "scope" : null,
+            "platform" : null,
+            "commitHash" : null
+          },
+          "directs" : [ ],
+          "filename" : "requirements.txt",
+          "lineNumber" : null,
+          "moduleName" : null,
+          "sha1" : null,
+          "sha2" : null,
+          "bytecodeHash" : null
+        }, {
+          "coords" : {
+            "coordinateType" : "PYPI",
+            "coordinate1" : "certifi",
+            "coordinate2" : null,
+            "version" : "2020.6.20",
+            "scope" : null,
+            "platform" : null,
+            "commitHash" : null
+          },
+          "directs" : [ ],
+          "filename" : "requirements.txt",
+          "lineNumber" : null,
+          "moduleName" : null,
+          "sha1" : null,
+          "sha2" : null,
+          "bytecodeHash" : null
+        }, {
+          "coords" : {
+            "coordinateType" : "PYPI",
+            "coordinate1" : "urllib3",
+            "coordinate2" : null,
+            "version" : "1.25.10",
+            "scope" : null,
+            "platform" : null,
+            "commitHash" : null
+          },
+          "directs" : [ ],
+          "filename" : "requirements.txt",
+          "lineNumber" : null,
+          "moduleName" : null,
+          "sha1" : null,
+          "sha2" : null,
+          "bytecodeHash" : null
+        }, {
+          "coords" : {
+            "coordinateType" : "PYPI",
+            "coordinate1" : "idna",
+            "coordinate2" : null,
+            "version" : "2.10",
+            "scope" : null,
+            "platform" : null,
+            "commitHash" : null
+          },
+          "directs" : [ ],
+          "filename" : "requirements.txt",
+          "lineNumber" : null,
+          "moduleName" : null,
+          "sha1" : null,
+          "sha2" : null,
+          "bytecodeHash" : null
+        } ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 3,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      } ],
+      "filename" : "requirements.txt",
+      "lineNumber" : null,
+      "moduleName" : null,
+      "sha1" : null,
+      "sha2" : null,
+      "bytecodeHash" : null
+    } ],
+    "libraries" : [ {
+      "name" : "certifi",
+      "description" : "Python package for providing Mozilla's CA Bundle.",
+      "author" : "Kenneth Reitz",
+      "authorUrl" : "https://certifiio.readthedocs.io/en/latest/",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "certifi",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "2020.6.20",
+      "latestReleaseDate" : "2020-06-20T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "2020.6.20",
+        "releaseDate" : "2020-06-20T00:00:00.000+0000",
+        "sha1" : "4bb6fad4f43f262f61d306581d9e29c91ff1d1e2",
+        "sha2" : "5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "MPL20",
+          "license" : "Mozilla Public License 2.0 (MPL-2.0)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/211509?version=2020.6.20"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/211509"
+      }
+    }, {
+      "name" : "cffi",
+      "description" : "Foreign Function Interface for Python calling C code.",
+      "author" : "Armin Rigo, Maciej Fijalkowski",
+      "authorUrl" : "http://cffi.readthedocs.org",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "cffi",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "1.14.3",
+      "latestReleaseDate" : "2020-09-15T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "1.14.3",
+        "releaseDate" : "2020-09-15T00:00:00.000+0000",
+        "sha1" : "7199374653c1927e8d3c523b6498b149acdb6f7e",
+        "sha2" : "f92f789e4f9241cd262ad7a555ca2c648a98178a953af117ef7fad46aa1d5591",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "MIT",
+          "license" : "MIT license (MIT)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/171320?version=1.14.3"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/171320"
+      }
+    }, {
+      "name" : "chardet",
+      "description" : "Universal encoding detector for Python 2 and 3",
+      "author" : "Daniel Blanchard",
+      "authorUrl" : "https://github.com/chardet/chardet",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "chardet",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "3.0.4",
+      "latestReleaseDate" : "2017-06-08T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "3.0.4",
+        "releaseDate" : "2017-06-08T00:00:00.000+0000",
+        "sha1" : "4766fb07e700945a7085d073257f1f320d037ce8",
+        "sha2" : "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "LGPL30",
+          "license" : "GNU Library or \"Lesser\" General Public License version 3.0 (LGPL-3.0)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/197825?version=3.0.4"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/197825"
+      }
+    }, {
+      "name" : "cryptography",
+      "description" : "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
+      "author" : "The cryptography developers",
+      "authorUrl" : "https://github.com/pyca/cryptography",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "cryptography",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "3.1",
+      "latestReleaseDate" : "2020-08-27T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "3.1",
+        "releaseDate" : "2020-08-27T00:00:00.000+0000",
+        "sha1" : "cf1a47ca0186d3430d3412e6a8aa314f532daac3",
+        "sha2" : "26409a473cc6278e4c90f782cd5968ebad04d3911ed1c402fc86908c17633e08",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/227073?version=3.1"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/227073"
+      }
+    }, {
+      "name" : "decorator",
+      "description" : "Decorators for Humans",
+      "author" : "Michele Simionato",
+      "authorUrl" : "https://github.com/micheles/decorator",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "decorator",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "4.4.2",
+      "latestReleaseDate" : "2020-02-29T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "4.4.2",
+        "releaseDate" : "2020-02-29T00:00:00.000+0000",
+        "sha1" : "24d4560ff3e89a6cec068d323383577343c086fb",
+        "sha2" : "e3a62f0520172440ca0dcc823749319382e377f37f140a0b99ef45fecb84bfe7",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "BSD3",
+          "license" : "BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/233740?version=4.4.2"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/233740"
+      }
+    }, {
+      "name" : "idna",
+      "description" : "Internationalized Domain Names in Applications (IDNA)",
+      "author" : "Kim Davies",
+      "authorUrl" : "https://github.com/kjd/idna",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "idna",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "2.10",
+      "latestReleaseDate" : "2020-06-27T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "2.10",
+        "releaseDate" : "2020-06-27T00:00:00.000+0000",
+        "sha1" : "ab9b7f0143cc0095da8439939eee9ce153af5f60",
+        "sha2" : "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "BSD3",
+          "license" : "BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/225366?version=2.10"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/225366"
+      }
+    }, {
+      "name" : "nassl",
+      "description" : "Experimental OpenSSL wrapper for Python 3.7+ and SSLyze.",
+      "author" : "Alban Diquet",
+      "authorUrl" : "https://github.com/nabla-c0d3/nassl",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "nassl",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "3.0.0",
+      "latestReleaseDate" : "2020-03-16T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "3.0.0",
+        "releaseDate" : "2020-03-16T00:00:00.000+0000",
+        "sha1" : "3ae5f9d335a2359d9082671cbe86ea26a8b13d22",
+        "sha2" : "47376818b088e888c579aaabcc6d16a74581209299d6263d25e8a399b9f43e48",
+        "bytecodeHash" : null,
+        "platform" : "cp37",
+        "licenses" : [ ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/216743?version=3.0.0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/216743"
+      }
+    }, {
+      "name" : "pycparser",
+      "description" : "C parser in Python",
+      "author" : "Eli Bendersky",
+      "authorUrl" : "https://github.com/eliben/pycparser",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "pycparser",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "2.20",
+      "latestReleaseDate" : "2020-03-04T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "2.20",
+        "releaseDate" : "2020-03-04T00:00:00.000+0000",
+        "sha1" : "0ae93d89b69fab48af3a407a2f8663bcea270c3d",
+        "sha2" : "2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "BSD3",
+          "license" : "BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/199666?version=2.20"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/199666"
+      }
+    }, {
+      "name" : "requests",
+      "description" : "Python HTTP for Humans.",
+      "author" : "Kenneth Reitz",
+      "authorUrl" : "https://requests.readthedocs.io",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "requests",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "2.24.0",
+      "latestReleaseDate" : "2020-06-17T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "2.24.0",
+        "releaseDate" : "2020-06-17T00:00:00.000+0000",
+        "sha1" : "9144742bf54db5f2a74a3e724cec3c19431b3539",
+        "sha2" : "b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "APACHE20",
+          "license" : "Apache License 2.0 (Apache-2.0)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167292?version=2.24.0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167292"
+      }
+    }, {
+      "name" : "six",
+      "description" : "Python 2 and 3 compatibility utilities",
+      "author" : "Benjamin Peterson",
+      "authorUrl" : "https://github.com/benjaminp/six",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "six",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "1.15.0",
+      "latestReleaseDate" : "2020-05-21T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "1.15.0",
+        "releaseDate" : "2020-05-21T00:00:00.000+0000",
+        "sha1" : "a785c20658b3676333c749436f088394c12b0c26",
+        "sha2" : "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "MIT",
+          "license" : "MIT license (MIT)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/172868?version=1.15.0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/172868"
+      }
+    }, {
+      "name" : "urllib3",
+      "description" : "HTTP library with thread-safe connection pooling, file post, and more.",
+      "author" : "Andrey Petrov",
+      "authorUrl" : "https://urllib3.readthedocs.io/",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "urllib3",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "1.25.10",
+      "latestReleaseDate" : "2020-07-22T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "1.25.10",
+        "releaseDate" : "2020-07-22T00:00:00.000+0000",
+        "sha1" : "71f01909d2713c7f51c423f29939cd556cf1c7b5",
+        "sha2" : "91056c15fa70756691db97756772bb1eb9678fa585d9184f24534b100dc60f4a",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "MIT",
+          "license" : "MIT license (MIT)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/182115?version=1.25.10"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/182115"
+      }
+    }, {
+      "name" : "validators",
+      "description" : "Python Data Validation for Humans™.",
+      "author" : "Konsta Vesterinen",
+      "authorUrl" : "https://github.com/kvesteri/validators",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "validators",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "0.18.0",
+      "latestReleaseDate" : "2020-08-19T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "0.18.0",
+        "releaseDate" : "2020-08-19T00:00:00.000+0000",
+        "sha1" : "4a4d258b007e2211a1aa3d72a7567001d78d0e0f",
+        "sha2" : "bad0cf89a7f2e0aa9c4b76fa5f1d2309125a2c77eb176f03b89a6d5059271e63",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "MIT",
+          "license" : "MIT license (MIT)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/200771?version=0.18.0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/200771"
+      }
+    } ],
+    "vulnerabilities" : [ ],
+    "unmatchedLibraries" : [ ],
+    "vulnMethods" : [ ]
+  } ]
+}

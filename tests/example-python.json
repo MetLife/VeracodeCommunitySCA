@@ -1,0 +1,1322 @@
+{
+  "metadata" : {
+    "requestDate" : "2020-10-13T18:30:31.483+0000"
+  },
+  "records" : [ {
+    "metadata" : {
+      "recordType" : "SCAN",
+      "report" : "https://sca.analysiscenter.veracode.com/teams/D77HdZj/scans/19573432"
+    },
+    "graphs" : [ {
+      "coords" : {
+        "coordinateType" : "PYPI",
+        "coordinate1" : "<undefined>",
+        "coordinate2" : null,
+        "version" : "<undefined>",
+        "scope" : null,
+        "platform" : null,
+        "commitHash" : null
+      },
+      "directs" : [ {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "PyJWT",
+          "coordinate2" : null,
+          "version" : "0.4.2",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 3,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      }, {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "django",
+          "coordinate2" : null,
+          "version" : "1.7.1",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 2,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      }, {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "pycrypto",
+          "coordinate2" : null,
+          "version" : "2.4",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 6,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      }, {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "requests",
+          "coordinate2" : null,
+          "version" : "2.2.1",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 4,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      }, {
+        "coords" : {
+          "coordinateType" : "PYPI",
+          "coordinate1" : "feedparser",
+          "coordinate2" : null,
+          "version" : "5.1.1",
+          "scope" : null,
+          "platform" : null,
+          "commitHash" : null
+        },
+        "directs" : [ ],
+        "filename" : "requirements.txt",
+        "lineNumber" : 5,
+        "moduleName" : null,
+        "sha1" : null,
+        "sha2" : null,
+        "bytecodeHash" : null
+      } ],
+      "filename" : "requirements.txt",
+      "lineNumber" : null,
+      "moduleName" : null,
+      "sha1" : null,
+      "sha2" : null,
+      "bytecodeHash" : null
+    } ],
+    "libraries" : [ {
+      "name" : "Django",
+      "description" : "A high-level Python Web framework that encourages rapid development and clean, pragmatic design.",
+      "author" : "Django Software Foundation",
+      "authorUrl" : "https://www.djangoproject.com/",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "django",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "1.7.1",
+      "latestReleaseDate" : "2014-10-22T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "1.7.1",
+        "releaseDate" : "2014-10-22T00:00:00.000+0000",
+        "sha1" : "689efc1e6d72b45b4deb451e6ed36ee77389fafc",
+        "sha2" : "3de62e71ce2cfbcdecb6e344cad04948506c8410ea5c6eab15c8f3b31b8ac1c0",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "BSD3",
+          "license" : "BSD 3-Clause \"New\" or \"Revised\" License (BSD-3-Clause)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167006?version=1.7.1"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167006"
+      }
+    }, {
+      "name" : "feedparser",
+      "description" : "Universal feed parser, handles RSS 0.9x, RSS 1.0, RSS 2.0, CDF, Atom 0.3, and Atom 1.0 feeds",
+      "author" : "Kurt McKee",
+      "authorUrl" : "https://github.com/kurtmckee/feedparser",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "feedparser",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "5.1.1",
+      "latestReleaseDate" : "2012-03-20T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "5.1.1",
+        "releaseDate" : "2012-03-20T00:00:00.000+0000",
+        "sha1" : "6a968b8596bed4ebea38bccd44e480f54f185798",
+        "sha2" : "52542106f55d044a404f00bf328bd29e81e49c38a130a05be66a8e4dc4f9ff57",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "BSD2",
+          "license" : "BSD 2-Clause \"Simplified\" or \"FreeBSD\" License (BSD-2-Clause)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167547?version=5.1.1"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167547"
+      }
+    }, {
+      "name" : "pycrypto",
+      "description" : "Cryptographic modules for Python.",
+      "author" : "Dwayne C. Litzenberger",
+      "authorUrl" : "http://www.pycrypto.org/",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "pycrypto",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "2.4",
+      "latestReleaseDate" : "2011-10-22T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "2.4",
+        "releaseDate" : "2011-10-22T00:00:00.000+0000",
+        "sha1" : "5a13dd3f0f5ecebd7f579a4510f1cd53c4a4981b",
+        "sha2" : "f49d8aea2d7d65db9906c7d3b8b3a07fcae8387cf5cb06a7510383e211902d39",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "PDC",
+          "license" : "Public Domain Per Creative Commons",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167512?version=2.4"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167512"
+      }
+    }, {
+      "name" : "PyJWT",
+      "description" : "JSON Web Token implementation in Python",
+      "author" : "Jose Padilla",
+      "authorUrl" : "http://github.com/jpadilla/pyjwt",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "pyjwt",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "0.4.2",
+      "latestReleaseDate" : "2015-02-18T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "0.4.2",
+        "releaseDate" : "2015-02-18T00:00:00.000+0000",
+        "sha1" : "efef14b56e4b896668ebfff57da2dd81f709c2c1",
+        "sha2" : "a0019f8119cd9a31d9c29e7b47256b24642829c10941ee20f513487f466201d9",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "MIT",
+          "license" : "MIT license (MIT)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/168086?version=0.4.2"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/168086"
+      }
+    }, {
+      "name" : "requests",
+      "description" : "Python HTTP for Humans.",
+      "author" : "Kenneth Reitz",
+      "authorUrl" : "https://requests.readthedocs.io",
+      "language" : "PYTHON",
+      "coordinateType" : "PYPI",
+      "coordinate1" : "requests",
+      "coordinate2" : "",
+      "bugTrackerUrl" : null,
+      "codeRepoType" : null,
+      "codeRepoUrl" : null,
+      "latestRelease" : "2.2.1",
+      "latestReleaseDate" : "2014-01-23T00:00:00.000+0000",
+      "versions" : [ {
+        "version" : "2.2.1",
+        "releaseDate" : "2014-01-23T00:00:00.000+0000",
+        "sha1" : "88eb1fd6a0dfb8b97262f8029978d7c75eebc16f",
+        "sha2" : "1266921f1bed5fbf364cd83cf239b6d7b3ea5c32ccccbc93980d9ba12cdcfd02",
+        "bytecodeHash" : null,
+        "platform" : "source",
+        "licenses" : [ {
+          "name" : "APACHE20",
+          "license" : "Apache License 2.0 (Apache-2.0)",
+          "fromParentPom" : false
+        } ],
+        "_links" : {
+          "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167292?version=2.2.1"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/libraries/167292"
+      }
+    } ],
+    "vulnerabilities" : [ {
+      "disclosureDate" : "2015-11-11T16:00:00.000+0000",
+      "cve" : "2015-8213",
+      "title" : "Information Disclosure Through Date Template Filter",
+      "overview" : "Django is vulnerable to information disclosure. This vulnerability is caused in the get_format function in utils/formats.py which allows a malicious user to obtain any secret in the application settings by specifying a settings key name instead of a date format.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Information Disclosure" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.11",
+          "versionRange" : "1.7-1.7.10",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/316bc3fc9437c5960c24baceb93c73f1939711e4"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1966"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-08-17T16:00:00.000+0000",
+      "cve" : "2015-5964",
+      "title" : "Denial Of Service (DoS) Session Store Consumption",
+      "overview" : "Django is vulnerable to Denial of Service attacks through Session Store Consumption. This vulnerability can be caused when remote attackers trigger contrib.sessions.backends.base.SessionBase.flush function or the cache_db.SessionStore.flush function to create empty sessions, using up the store.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.10",
+          "versionRange" : "1.7-1.7.9",
+          "fixText" : "",
+          "patch" : ""
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1967"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-08-17T16:00:00.000+0000",
+      "cve" : "2015-5963",
+      "title" : "Denial Of Service (DoS) Session Store Consumption Or Session Record Removal",
+      "overview" : "Django is vulnerable to denial of service through session store consumption or session record removal. This is caused in contrib.sessions.middleware.SessionMiddleware when a large number of requests are made to contrib.auth.views.logout, triggering the creation of empty session records, using up the store.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.10",
+          "versionRange" : "1.7-1.7.9",
+          "fixText" : null,
+          "patch" : null
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1968"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-07-07T16:00:00.000+0000",
+      "cve" : "2015-5144",
+      "title" : "HTTP Response Splitting Attacks And Arbitrary Header Injection",
+      "overview" : "Django is vulnerable to HTTP response splitting attacks and arbitrary header injection.This vulnerability is caused by the use of an incorrect regular expression that didn't prohibit newline characters.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Other" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.9",
+          "versionRange" : "1.5-1.7.8",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/014247ad1922931a2f17beaf6249247298e9dc44"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1971"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-07-07T16:00:00.000+0000",
+      "cve" : "2015-5143",
+      "title" : "Denial Of Service (DoS) Session Store Consumption",
+      "overview" : "Django is vulnerable to denial of service through session store consumption. This vulnerable is caused by sessions backends creating new empty records in the session storage when request.session is accessed when a session key provided didn't match a current session record. This allows malicious users to send multiple requests with unique session keys, filling the session store.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 7.8,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.9",
+          "versionRange" : "1.5-1.7.8",
+          "fixText" : "",
+          "patch" : ""
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1972"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-03-09T16:00:00.000+0000",
+      "cve" : "2015-2317",
+      "title" : "Cross-site Scripting (XSS) Through A Control Character In A URL",
+      "overview" : "Django is vulnerable to cross-site scripting through a control character in a url. The utils.http.is_safe_url function does not correctly validate URLs which allows remote attackers to enter urls such as \"\\x08javascript: \". The vulnerability is possible only in browsers which ignore control characters at the start of a URL in an anchor href.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.7",
+          "versionRange" : "1.7-1.7.6",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/011a54315e46acdf288003566b8570440f5ac985"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1977"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-03-03T16:00:00.000+0000",
+      "cve" : "2015-2316",
+      "title" : "Denial Of Service (DoS) Infinite Loop",
+      "overview" : "Django is vulnerable to a denial of service attacks through an infinite loop. This vulnerability is caused when an input string of great length is input into the utils.html.strip_tags function when using Python < 2.7.7 or 3.3.5.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.7",
+          "versionRange" : "1.7-1.7.6",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/1c83fc88d6928a5ab53bc3dde79dad3cc0bfcfdc"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1978"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-03-13T16:00:00.000+0000",
+      "cve" : "2015-2296",
+      "title" : "Session Fixation Attacks",
+      "overview" : "The Python requests package is vulnerable to session fixation attacks. This is caused in the resolve_redirects function in sessions.py. When it received a cookie with no host value set, it would use the hostname of the redirected URL.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Session Management" ],
+      "cvssScore" : 6.8,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.6.0",
+          "versionRange" : "2.1.0-2.5.3",
+          "fixText" : "",
+          "patch" : "https://github.com/kennethreitz/requests/commit/3bd8afbff29e50b38f889b2f688785a669b9aafc"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/4/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1979"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-03-15T16:00:00.000+0000",
+      "cve" : "2015-2241",
+      "title" : "Cross-site Scripting (XSS)",
+      "overview" : "Django is vulnerable to cross-site scripting in the contents function in contrib/admin/helpers.py. This is caused by the ModeAdmin.readonly_fields model attributes not being escaped.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.6",
+          "versionRange" : "1.7-1.7.5",
+          "fixText" : "",
+          "patch" : ""
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1980"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-12-10T16:00:00.000+0000",
+      "cve" : "2015-0222",
+      "title" : "Denial Of Service (DoS)",
+      "overview" : "Django is vulnerable to denial of service attacks when show_hidden_initial is set to True. This vulnerable is triggered when remote attackers submit forms using the ModelMultipleChoiceField with duplicate values, triggering a large number of SQL queries.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.3",
+          "versionRange" : "1.7-1.7.2",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/baf2542c4f502d8f5adc3704eb22ca237d50aee1"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1983"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2014-12-09T16:00:00.000+0000",
+      "cve" : "2015-0221",
+      "title" : "Denial Of Service (DoS) Memory Consumption",
+      "overview" : "Django is vulnerable to denial of service attacks through memory consumption. django.views.static.serve() reads files that it's given one line at a time. If a large single-lined file was given to it in large quantities, it can use up the memory.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.3",
+          "versionRange" : "1.7-1.7.2",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/a3bebfdc34686622b91e7f3154390ca2058957f9"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1984"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-01-12T16:00:00.000+0000",
+      "cve" : "2015-0220",
+      "title" : "Cross-site Scripting (XSS)",
+      "overview" : "Django is vulnerable to cross-site scripting attacks in the django.uitl.http.is_safe_url function. The function doesn't correctly handle leading white spaces, allowing attackers to use URLs such as \"\\njavascript:\" to perform attacks.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.3",
+          "versionRange" : "1.7-1.7.2",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/69b5e667385db9ed5e61917a58a75f97b6a97e68"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1985"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-01-12T16:00:00.000+0000",
+      "cve" : "2015-0219",
+      "title" : "Spoofable WSGI Headers",
+      "overview" : "Django is vulnerable to attackers spoofing WSGI headers. They can carry out this attack by using an _ (underscore) character instead of a - (dash) in an HTTP header.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Other" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.7.3",
+          "versionRange" : "1.7-1.7.2",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/41b4bc73ee0da7b2e09f4af47fc1fd21144c710f"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/1986"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2013-12-24T16:00:00.000+0000",
+      "cve" : "2014-1830",
+      "title" : "Information Disclosure",
+      "overview" : "The requests package for Python is vulnerable to information disclosure. Sensitive information can be obtained by malicious users by reading the Proxy-Authorization header in a redirected request.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Information Disclosure" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.3.0",
+          "versionRange" : "0.2.0-2.2.1",
+          "fixText" : "",
+          "patch" : "https://github.com/kennethreitz/requests/commit/f1893c835570d72823c970fbd6e0e42c13b1f0f2"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/4/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2048"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2013-12-24T16:00:00.000+0000",
+      "cve" : "2014-1829",
+      "title" : "Information Disclosure",
+      "overview" : "The requests package for Python is vulnerable to information disclosure. Remote servers are able to obtain a netrc password by reading the Authorization header in a redirected request.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Information Disclosure" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.3.0",
+          "versionRange" : "0.2.0-2.2.1",
+          "fixText" : "",
+          "patch" : "https://github.com/kennethreitz/requests/commit/f1893c835570d72823c970fbd6e0e42c13b1f0f2"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/4/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2049"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2013-10-14T16:00:00.000+0000",
+      "cve" : "2013-1445",
+      "title" : "Information Disclosure Through A Race Condition",
+      "overview" : "pycrypto is vulnerable to sensitive information disclosure by leveraging a race condition. The Crypto.Random.atfork function does not reseed the psuedo-random number generator before allowing the child process to access it. By leveraging a race condition where a child process is created and accesses the psuedo-random number generator in the same rate-limit period as another process,  an attacker can obtain sensitive information.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Information Disclosure" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.6.1",
+          "versionRange" : "2.0.1-2.6",
+          "fixText" : "",
+          "patch" : "https://github.com/dlitz/pycrypto/commit/19dcf7b15d61b7dc1a125a367151de40df6ef175"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/2/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2099"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2012-05-02T16:00:00.000+0000",
+      "cve" : "2012-2921",
+      "title" : "Denial Of Service (DoS) Memory Consumption",
+      "overview" : "feedparser is vulnerable to denial of service attacks. Using an XML ENTITY declaration in a non-ASCII encoded document, attackers are able to cause a denial of service through memory consumption.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "5.1.2",
+          "versionRange" : "4.1-5.1.1",
+          "fixText" : null,
+          "patch" : null
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/1/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2136"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2012-04-17T16:00:00.000+0000",
+      "cve" : "2012-2417",
+      "title" : "Insecure Key Generation",
+      "overview" : "pycrypto does not produce appropriate prime numbers for the ElGamal scheme for key generation. This reduces the public key space and makes it easier for attackers to brute-force a private key.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cryptography" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.6",
+          "versionRange" : "2.0.1-2.5",
+          "fixText" : "",
+          "patch" : "https://github.com/dlitz/pycrypto/commit/9f912f13df99ad3421eff360d6a62d7dbec755c2"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/2/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2137"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-03-17T16:00:00.000+0000",
+      "cve" : null,
+      "title" : "Validation Bypass",
+      "overview" : "pyjwt is vulnerable to validation bypass. If the secretKey was expected to be a RSA public key, but the malicious user changes the header to indicate a signature algorithm of HMAC, the RSA public key can be used as the signing secret. This allows the malicious user to forge a token that the server will accept.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cryptography" ],
+      "cvssScore" : 9.4,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.0.0",
+          "versionRange" : "0.1.1-0.4.3",
+          "fixText" : "",
+          "patch" : "https://github.com/jpadilla/pyjwt/commit/6a84d73f5a48488d3daf554a69500c3f42bb464d"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/3/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2192"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2016-02-13T16:00:00.000+0000",
+      "cve" : "2016-2512",
+      "title" : "Cross-site Scripting (XSS) And Malicious Redirect",
+      "overview" : "Django has a flaw which causes cross-site scripting and malicious redirects. This vulnerability is caused by the django.utils.http.is_safe_url() method which fails to check the user supplied URL with basic authentication credentials. This allows an attacker to bypass the URL, for example: http://mysite.example.com\\@attacker.com, since  http://mysite.example.com is considered to be safe. However, in reality, the supplied URL will redirect the users to attacker.com.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)", "Other" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.8.10",
+          "versionRange" : "1.0.4-1.8.9",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/c5544d289233f501917e25970c03ed444abbd4f0"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2210"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2016-02-13T16:00:00.000+0000",
+      "cve" : "2016-2513",
+      "title" : "User Enumeration Timing Attack During Login",
+      "overview" : "Django is vulnerable to user enumeration timing attack. It is due to there being a timing difference between the work factor (e.g. iterations) supplied in existing encoded passwords and the default work factor of the hasher. By using the time it takes for the login request to be returned, a malicious user may be able to gain information about the user's login habits. This only affects users who haven't logged in since the iterations were increased.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Authentication" ],
+      "cvssScore" : 2.6,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.9.3",
+          "versionRange" : "1.6-1.9.2",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/67b46ba7016da2d259c1ecc7d666d11f5e1cfaab"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2211"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2016-07-07T00:00:00.000+0000",
+      "cve" : "2016-6186",
+      "title" : "Cross-site Scripting (XSS)",
+      "overview" : "Django is vulnerable to cross-site scripting (XSS) attacks. The vulnerability exists because admin's add/change related popup adopts an unsafe usage of JavaScript's Element.innerHTML webapi.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)", "Other" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.8.14",
+          "versionRange" : "1.0.4-1.8.13",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/f68e5a99164867ab0e071a936470958ed867479d"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2561"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2014-07-15T00:00:00.000+0000",
+      "cve" : null,
+      "title" : "Validation Bypass",
+      "overview" : "pyjwt is vulnerable to validation bypasses. When a secretkey is provided to the API, if the token header specifies the signature algorithm to \"none\" , the API will still return successfully. This allows a malicious user to strip the signature and change the header to bypass the server-side signature validation.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Authorization" ],
+      "cvssScore" : 9.4,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.0.0",
+          "versionRange" : "0.1.1-0.4.3",
+          "fixText" : "",
+          "patch" : "https://github.com/jpadilla/pyjwt/commit/3e59fe6c9e88d212180dfec61b36d58858af0367"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/3/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2603"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2016-10-25T00:00:00.000+0000",
+      "cve" : "2016-9013",
+      "title" : "Use Of Hardcoded Password",
+      "overview" : "Django uses hardcoded passwords for test users with Oracle database, allowing malicious users to access the database remotely. A hardcoded password  is used when a manual password for the test user isn't  specified in the database settings TEST dictionary. This test user is usually dropped after the test suite completes, but not when using the manage.py test --keepdb option or if the user has an active session. Thus, an attacker can exploit this vulnerability to access the database.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Other" ],
+      "cvssScore" : 7.5,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.8.16",
+          "versionRange" : "1.1.3-1.7.11",
+          "fixText" : "",
+          "patch" : ""
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2958"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2016-10-18T00:00:00.000+0000",
+      "cve" : "2016-9014",
+      "title" : "DNS Rebinding Vulnerability",
+      "overview" : "Django is vulnerable to DNS rebinding attack. This is because Django does not validate the Host header against settings.ALLOWED_HOSTS when settings.DEBUG=True. The Host header can be manipulated as at least a cross-site scripting vector, which could be quite serious if developers load a copy of the production database in development or connect to some production services for which there is no development instance. The attacker could also execute arbitrary SQL if a project uses a package like the django-debug-toolbar, and it can be even worse if the developers connect to the database with a superuser account.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)", "Other", "SQL Injection" ],
+      "cvssScore" : 6.8,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.8.16",
+          "versionRange" : "1.1.3-1.7.11",
+          "fixText" : "",
+          "patch" : ""
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/2959"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2015-12-15T00:00:00.000+0000",
+      "cve" : "2013-7459",
+      "title" : "Arbitrary Remote Code Execution Via Buffer Overflow",
+      "overview" : "pycrypto is vulnerable to remote code execution (RCE) via heap buffer overflow attacks. There is a heap buffer overflow on `ALGobject.IV` in `block_templace.c`, where attackers can write as many bytes as they want on part of the heap, and exploit it to control the execution flow to execute shell commands.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Buffer Overflows", "Remote Procedure Calls" ],
+      "cvssScore" : 7.5,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "",
+          "versionRange" : "2.3-2.6.1",
+          "fixText" : "Apply the fix patch below.",
+          "patch" : "https://github.com/dlitz/pycrypto/commit/8dbe0dc3eea5c689d4f76b37b93fe216cf1f00d4"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/2/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/3175"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2017-03-14T00:00:00.000+0000",
+      "cve" : "2017-7234",
+      "title" : "Open Redirect",
+      "overview" : "django is vulnerable to open redirection. A malicious user can pass a malicious url to the django.views.static.serve() view to redirect to any other domain.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Other" ],
+      "cvssScore" : 5.8,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.8.18",
+          "versionRange" : "1.3.5-1.8.17",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/4a6b945dffe8d10e7cec107d93e6efaebfbded29"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/3846"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2017-08-03T00:00:00.000+0000",
+      "cve" : "2017-12794",
+      "title" : "Cross-site Scripting (XSS)",
+      "overview" : "Django is vulnerable to cross-site scripting (XSS) attacks. The library disabled HTML escaping in the 500 debug page template, allowing a malicious user to inject and execute arbitrary webscript.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.10.8",
+          "versionRange" : "1.1.3-1.10.7",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/58e08e80e362db79eb0fd775dc81faad90dca47a"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/5017"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2018-02-02T00:00:00.000+0000",
+      "cve" : "2018-6594",
+      "title" : "Weak ElGamal Parameters",
+      "overview" : "PyCrypto uses weak ElGamal cryptography. Due to an incorrect implementation of ElGamal, the Decisional Diffie-Hellman (DDH) assumption doesn't hold because of the way the key parameters are generated. This allows attackers who have access to the cipher-text to decrypt the messages and potentially gain access to sensitive information.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cryptography", "Information Disclosure" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "",
+          "versionRange" : "2.1.0-2.6.1",
+          "fixText" : "Apply the patch from the GitHub Pull Request given.",
+          "patch" : ""
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/2/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/5793"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2018-02-25T00:00:00.000+0000",
+      "cve" : "2018-7536",
+      "title" : "Regular Expression Denial Of Service (ReDoS)",
+      "overview" : "Django is vulnerable to regular expression denial of service (ReDoS) attacks.The application takes more than linear time when certain strings are passed to the `urlize` function, resulting in a DoS.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.8.19",
+          "versionRange" : "1.4-1.8.18",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/1ca63a66ef3163149ad822701273e8a1844192c2"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/5896"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2018-02-25T00:00:00.000+0000",
+      "cve" : "2018-7537",
+      "title" : "Regular Expression Denial Of Service (ReDoS)",
+      "overview" : "Django is vulnerable to regular expression denial of service (ReDoS) attacks. The application takes more than linear time when certain strings are passed to the text truncating function, resulting in a DoS.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.8.19",
+          "versionRange" : "1.4-1.8.18",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/d17974a287a6ea2e361daff88fcc004cbd6835fa"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/5897"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2018-09-13T00:00:00.000+0000",
+      "cve" : "2018-16984",
+      "title" : "Information Disclosure",
+      "overview" : "django is vulnerable to information disclosure. Admin users with the `view-only` permission are able to retrieve the entire password hash of arbitrary accounts through the read-only password widget that displays obfuscated password hashes.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Information Disclosure" ],
+      "cvssScore" : 4.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.11.27",
+          "versionRange" : "1.2-1.11.26",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/f4cff43bf921fcea6a29b726eb66767f67753fa2"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/7560"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2019-01-04T00:00:00.000+0000",
+      "cve" : "2019-3498",
+      "title" : "Content Spoofing",
+      "overview" : "django is vulnerable to content spoofing attacks. The vulnerability exists in the default 404 pages where `request.path` was not sanitized and can be used to display unwanted HTML on the default 404 pages.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Phishing attack" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.11.18",
+          "versionRange" : "1.5-1.11.17",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/1cd00fcf52d089ef0fe03beabd05d59df8ea052a"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/8119"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2019-06-13T00:00:00.000+0000",
+      "cve" : "2019-12781",
+      "title" : "Man-in-the-Middle (MitM)",
+      "overview" : "django is vulnerable to man-in-the-middle attacks. HTTP requests are not redirected to HTTPS in accordance with `SECURE_SSL_REDIRECT` when deployed behind a reverse-proxy due to incorrect results for `is_secure()` and `build_absolute_uri()`.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Configuration", "Man-in-the-middle", "Transport Security" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.11.22",
+          "versionRange" : "1.5-1.10.8",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/54d0f5e62f54c29a12dd96f44bacd810cbe03ac8"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/20644"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2019-07-14T00:00:00.000+0000",
+      "cve" : "2019-14232",
+      "title" : "Regular Expression Denial Of Service (ReDoS)",
+      "overview" : "Django is vulnerable to regular expression denial of service (ReDoS). The attack is due to lack of validation of inputs to a regular expression in ``django.utils.text.Truncator``'s ``chars()`` and ``words()`` methods, eventually causing an application crash if the input ``html=True`` is provided.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service", "Other" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.11.23",
+          "versionRange" : "1.1.3-1.11.22",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/42a66e969023c00536256469f0e8b8a099ef109d"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/20969"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2019-07-14T00:00:00.000+0000",
+      "cve" : "2019-14233",
+      "title" : "Denial Of Service (DoS)",
+      "overview" : "Django is vulnerable to denial of service (DoS). It does not properly handle HTML entities in the function `strip_tags()`, causing excessive HTMLParser recursions.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service", "Other" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.11.23",
+          "versionRange" : "1.1.3-1.11.22",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/52479acce792ad80bb0f915f20b835f919993c72"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/20970"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2019-07-14T00:00:00.000+0000",
+      "cve" : "2019-14235",
+      "title" : "Denial Of Service (DoS)",
+      "overview" : "Django is vulnerable to denial of service (DoS). It uses recursion to handle an exception, causing excessive memory exhaustion and an application crash.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Denial of Service" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "1.11.23",
+          "versionRange" : "1.1.3-1.11.22",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/869b34e9b3be3a4cfcb3a145f218ffd3f5e3fd79"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/20972"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2020-05-27T00:00:00.000+0000",
+      "cve" : "2020-13596",
+      "title" : "Cross-site Scripting (XSS)",
+      "overview" : "django is vulnerable to cross-site scripting (XSS). The vulnerability exists as the value of `params`, used in `get_context`, in `admin.widgets.py` is not properly sanitized.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Cross Site Scripting (XSS)" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.2.13",
+          "versionRange" : "1.4-2.2.12",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/6d61860b22875f358fac83d903dc629897934815"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/25590"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2020-05-20T00:00:00.000+0000",
+      "cve" : "2020-13254",
+      "title" : "Information Disclosure",
+      "overview" : "django is vulnerable to information disclosure. The vulnerability exists as the `add`, `get`, `set`, `delete`, `get_many`, `incr`, `decr` operations in `django/core/cache/backends/memcached.py` does not properly validate the cache key.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Information Disclosure" ],
+      "cvssScore" : 4.3,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.2.13",
+          "versionRange" : "1.1.3-2.2.12",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/07e59caa02831c4569bbebb9eb773bdd9cb4b206"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/25601"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2020-08-21T00:00:00.000+0000",
+      "cve" : "2020-24583",
+      "title" : "Authorization Bypass",
+      "overview" : "django is vulnerable to authorization bypass. The `FILE_UPLOAD_DIRECTORY_PERMISSIONS` mode was not applied to intermediate-level directories created in the process of uploading files and to intermediate-level collected static directories when using the `collectstatic` management command.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Authorization", "Configuration" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.2.16",
+          "versionRange" : "1.7-2.2.15",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/375657a71c889c588f723469bd868bd1d40c369f"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/26548"
+      },
+      "hasExploits" : false
+    }, {
+      "disclosureDate" : "2020-08-25T00:00:00.000+0000",
+      "cve" : "2020-24584",
+      "title" : "Privilege Escalation",
+      "overview" : "django is vulnerable to privilege escalation. The intermediate-level directories of the file system cache had the system's standard umask instead of `0o077`.",
+      "language" : "PYTHON",
+      "vulnerabilityTypes" : [ "Authorization" ],
+      "cvssScore" : 5.0,
+      "libraries" : [ {
+        "details" : [ {
+          "updateToVersion" : "2.2.16",
+          "versionRange" : "1.7-2.2.15",
+          "fixText" : "",
+          "patch" : "https://github.com/django/django/commit/a3aebfdc8153dc230686b6d2454ccd32ed4c9e6f"
+        } ],
+        "_links" : {
+          "ref" : "/records/0/libraries/0/versions/0"
+        }
+      } ],
+      "_links" : {
+        "html" : "https://www.sourceclear.com/vulnerability-database/vulnerabilities/26561"
+      },
+      "hasExploits" : false
+    } ],
+    "unmatchedLibraries" : [ ],
+    "vulnMethods" : [ {
+      "calls" : [ {
+        "method" : {
+          "className" : "SessionRedirectMixin",
+          "descriptor" : null,
+          "id" : null,
+          "methodName" : "resolve_redirects",
+          "moduleName" : ".requests.sessions"
+        },
+        "callChains" : [ [ {
+          "callee" : {
+            "className" : "SessionRedirectMixin",
+            "descriptor" : null,
+            "id" : null,
+            "methodName" : "resolve_redirects",
+            "moduleName" : ".requests.sessions"
+          },
+          "caller" : {
+            "className" : null,
+            "descriptor" : null,
+            "id" : null,
+            "methodName" : null,
+            "moduleName" : ".main"
+          },
+          "fileName" : "main.py",
+          "internal" : true,
+          "lineNumber" : 10
+        } ] ]
+      } ],
+      "links" : [ {
+        "ref" : "/records/0/libraries/4/versions/0"
+      } ]
+    }, {
+      "calls" : [ {
+        "method" : {
+          "className" : null,
+          "descriptor" : null,
+          "id" : null,
+          "methodName" : "get_format",
+          "moduleName" : ".django.utils.formats"
+        },
+        "callChains" : [ [ {
+          "callee" : {
+            "className" : null,
+            "descriptor" : null,
+            "id" : null,
+            "methodName" : "get_format",
+            "moduleName" : ".django.utils.formats"
+          },
+          "caller" : {
+            "className" : null,
+            "descriptor" : null,
+            "id" : null,
+            "methodName" : null,
+            "moduleName" : ".main"
+          },
+          "fileName" : "main.py",
+          "internal" : true,
+          "lineNumber" : 7
+        } ] ]
+      } ],
+      "links" : [ {
+        "ref" : "/records/0/libraries/0/versions/0"
+      } ]
+    }, {
+      "calls" : [ {
+        "method" : {
+          "className" : "HMACAlgorithm",
+          "descriptor" : null,
+          "id" : null,
+          "methodName" : "prepare_key",
+          "moduleName" : ".jwt.algorithms"
+        },
+        "callChains" : [ [ {
+          "callee" : {
+            "className" : "HMACAlgorithm",
+            "descriptor" : null,
+            "id" : null,
+            "methodName" : "prepare_key",
+            "moduleName" : ".jwt.algorithms"
+          },
+          "caller" : {
+            "className" : null,
+            "descriptor" : null,
+            "id" : null,
+            "methodName" : null,
+            "moduleName" : ".main"
+          },
+          "fileName" : "main.py",
+          "internal" : true,
+          "lineNumber" : 8
+        } ] ]
+      } ],
+      "links" : [ {
+        "ref" : "/records/0/libraries/3/versions/0"
+      } ]
+    } ]
+  } ]
+}

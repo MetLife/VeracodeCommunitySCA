@@ -1,0 +1,21 @@
+{
+  "name": "veracodecommunityscaadoextension",
+  "version": "1.0.3",
+  "description": "Veracode Community SCA Azure DevOps Extension.",
+  "main": "scascan.js",
+  "scripts": {
+    "build": "tsc buildAndReleaseTask/scascan.ts",
+    "start": "node buildAndReleaseTask/scascan.js",
+    "build:start": "npm run build && node buildAndReleaseTask/scascan.js"
+  },
+  "author": "Joe Gatt",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.11.1",
+    "azure-pipelines-tool-lib": "^0.13.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "@types/q": "^1.5.4"
+  }
+}

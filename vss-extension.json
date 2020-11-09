@@ -1,0 +1,41 @@
+{
+    "manifestVersion": 1,
+    "id": "VeracodeCommunityScaAdoExtension",
+    "name": "Veracode Community SCA Azure DevOps Extension",
+    "version": "1.0.3",
+    "publisher": "JoeGatt",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Veracode Community SCA Azure DevOps Extension",
+    "tags": [
+        "Security",
+        "Azure Pipelines",
+        "Azure DevOps Extensions"
+      ],
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "buildAndReleaseTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildAndReleaseTask"
+            }
+        }
+    ]
+}
