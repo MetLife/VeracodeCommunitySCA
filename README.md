@@ -1,4 +1,4 @@
-# Veracode Community Software Composition Analysis (SCA) Azure DevOps Extension.
+# Veracode Community Software Composition Analysis (SCA) Azure DevOps Extension
 
 ## Overview
 
@@ -14,16 +14,22 @@ Currently, this plug-in will only run on a Linux or Mac Azure Pipelines agent (e
 
 There are five required inputs: SRCCLR_API_TOKEN, Scan type, Target to scan, Minimum CVSS score to report, and an option to fail the build.
 
-     * SRCCLR_API_TOKEN - Secure environment variable with your Veracode SCA token
-     * Scan type - Dropdown with three options: URL, Docker Image, or a path to the artifact(s)
-     * Target to scan - Specify the URL, docker image, or a path to the artifact(s) to scan
-     * Minimum CVSS score to report - Dropdown from 0-10 (Default is 5)
-     * Fail the build - Fail the build if any vulnerabilities are found (Default is no)
+* SRCCLR_API_TOKEN - Secure environment variable with your Veracode SCA token
+* Scan type - Dropdown with three options: URL, Docker Image, or a path to the artifact(s)
+* Target to scan - Specify the URL, docker image, or a path to the artifact(s) to scan
+* Minimum CVSS score to report - Dropdown from 0-10 (Default is 5)
+* Fail the build - Fail the build if any vulnerabilities are found (Default is no)
 
 There are two optional inputs: Application Name, and Test Agent capabilities
 
-     * Application Name - Optional input used to better label test results
-     * Test agent capabilities - Optional boolean that will run "srcclr test" during task execution. Useful for troubleshooting environment issues.
+* Application Name - Optional input used to better label test results
+* Test agent capabilities - Optional boolean that will run "srcclr test" during task execution. Useful for troubleshooting environment issues.
+
+## Setting and Securing SRCCLR_API_TOKEN
+
+A high-level overview of setting secret values in YAML pipelines is [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables). To set secret values in Classic pipelines, refer to the documentation [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables).
+
+In either case, first create a variable in your build or release pipeline called SRCCLR_API_TOKEN, store the token in the field, and click on the lock icon to protect the token. Please note, once you protect the token, you can never retrieve the value again. Once you have created the SRCCLR_API_TOKEN variable, you have to populate it in the plug-in. Navigate to the "Environment Variables" section of the plug-in, create a variable called SRCCLR_API_TOKEN and, for value, input $(SRCCLR_API_TOKEN). 
 
 ## Testing
 
