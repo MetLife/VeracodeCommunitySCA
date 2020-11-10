@@ -80,7 +80,9 @@ def write_output(target: str, results: list) -> None:
     for result in results:
         if result != {"Results": "No vulnerabilities."}:
             test_case = TestCase(result["Vulnerable Library"])
-            test_case.name = (result["Vulnerable Library"] + " - " + result["Vulnerability"] + " - " + str(result["CVSS"]))
+            test_case.name = (result["Vulnerable Library"] + " - "\
+                 + result["Vulnerability"] + " - "\
+                 + "CVSS " + str(result["CVSS"]))
             test_case.result = Failure(result)
         else:
             test_case = TestCase("No vulnerabilities")
@@ -114,9 +116,9 @@ def get_parent_package(transitive_package: str) -> str:
 
     # Get the top-level package
     top_package = ""
-    for k, v in npm_output['dependencies'].items():
-        top_package = (v['from'])
-    
+    for key, value in npm_output['dependencies'].items():
+        top_package = (value['from'])
+
     return top_package
 
 
