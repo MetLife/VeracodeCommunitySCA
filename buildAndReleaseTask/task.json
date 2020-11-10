@@ -26,7 +26,7 @@
                 "directory": "Path to Artifact(s)",
                 "url": "URL"
             },
-            "label": "Scan Type.",
+            "label": "Scan type.",
             "defaultValue": "directory",
             "required": true,
             "helpMarkDown": "Type of scan: artifact, docker image or a url of a git repo."
