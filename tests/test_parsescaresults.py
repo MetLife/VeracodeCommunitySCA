@@ -29,7 +29,8 @@ def test_parse_javascript_results():
     assert flaw_counter == 59
 
     actual_high_vulns = []
-    expected_high_vulns = ["console-io", "ms", "moment", "sequelize", "sequelize", "lodash", "send"]
+    expected_high_vulns = ["console-io", "ms", "moment", "sequelize", "sequelize",
+                           "lodash", "send"]
 
     for flaw in parsed_data:
         if flaw["CVSS"] >= 7.5:
@@ -228,3 +229,26 @@ def test_write_results_vulns():
 
     # Assert there are 15 failures reported in the Test Suite
     assert xml.failures == 15
+
+
+def test_multi_instance_of_vuln():
+    """ Test parsing of results that have multiple instances
+     of a vulnerability but in two or more different libraries """
+    
+    # Open the Veracode SCA JSON results
+    with open("example-dotnet.json", "r") as sca_results:
+        data = json.load(sca_results)
+
+    # Include all CVSS in the output
+    parsed_data = parse_sca_json(data, 0)
+
+    actual_dupe_vulns = []
+
+    # SQL Injection vulnerability is in both of these libraries
+    expected_dupe_vulns = ["GSF.Core", "GSF.Security"]
+
+    for flaw in parsed_data:
+        if flaw["Vulnerable Library"] in expected_dupe_vulns:
+            actual_dupe_vulns.append(flaw["Vulnerable Library"])
+
+    assert expected_dupe_vulns.sort() == actual_dupe_vulns.sort()
