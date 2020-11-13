@@ -1,5 +1,7 @@
 # Veracode Community Software Composition Analysis (SCA) Azure DevOps Extension
 
+This project is community contributed and is not supported by Veracode. For a list of supported projects, please visit Veracode.com.
+
 ## Overview
 
 Seamlessly integrate Veracode Agent-Based SCA scans with Azure DevOps build or release pipelines. Please note, the Agent-Based scan method is not the same thing as the "Upload and Scan" Method. You can find an overview of each method on Veracode's website [here](https://help.veracode.com/reader/9nOkCbEfhLEzMgzr2zCv5Q/8ogXM1j_wRm_AYmyKdrdoQ).
@@ -42,7 +44,7 @@ pytest -v test_parsescaresults.py --cov=../buildAndReleaseTask/. --cov-report=xm
 
 ## Known Issues and Limitations of the Microsoft hosted Azure Pipeline agent
 
-If you intend to test a private endpoint (i.e., internal source code repository), it is probable that the Microsoft hosted agents do not have access to your internal network. As a result, please use a self-hosted Azure Pipeline agent. For self-hosted agents, Python >= 3.7.x is required. Please Note: Windows is currently not supported for the Veracode Community SCA Azure DevOps Extension.
+If you intend to test a private endpoint (i.e., internal source code repository), it is probable that the Microsoft hosted agents do not have access to your internal network. As a result, please use a self-hosted Azure Pipeline agent. For self-hosted agents, Python >= 3.6.x is required. Please Note: Windows is currently not supported for the Veracode Community SCA Azure DevOps Extension.
 
 Please refer to the links below for your target platform:
 
