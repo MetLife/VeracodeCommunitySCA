@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "a5952ccd-a669-4f79-9aa2-9c5dcfa0c5e9",
+    "id": "38e8063b-f535-4063-b9f4-9e5d065205db",
     "name": "VeracodeCommunityScaAdoExtension",
     "friendlyName": "Veracode Community SCA Azure DevOps Extension",
     "description": "Veracode Community SCA Azure DevOps Extension",
@@ -10,7 +10,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 3
+        "Patch": 0
     },
     "runsOn": [
         "Agent",
