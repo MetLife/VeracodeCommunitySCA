@@ -29,9 +29,7 @@ There are two optional inputs: Application Name, and Test Agent capabilities
 
 ### Classic Pipeline Example
 
-.. image:: https://github.com/MetLife/VeracodeCommunitySCA/raw/master/images/sca-extension.png
-    :width: 600px
-    :align: center
+![SCA Extension](https://github.com/MetLife/VeracodeCommunitySCA/raw/master/images/sca-extension.png)
 
 ### YAML Pipeline Example
 
@@ -59,9 +57,7 @@ In either case, first create a variable in your build or release pipeline called
 
 Vulnerabilities (if any) are automatically published to the build or release pipeline. To view them, simply click on the "Tests" tab. For each vulnerability discovered, a "failed test" will appear in the results.
 
-.. image:: https://github.com/MetLife/VeracodeCommunitySCA/raw/master/images/sca-results.png
-    :width: 600px
-    :align: center
+![SCA Results](https://github.com/MetLife/VeracodeCommunitySCA/raw/master/images/sca-results.png)
 
 ## Testing
 
