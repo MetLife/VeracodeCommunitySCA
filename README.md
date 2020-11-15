@@ -27,11 +27,41 @@ There are two optional inputs: Application Name, and Test Agent capabilities
 * Application Name - Optional input used to better label test results
 * Test agent capabilities - Optional boolean that will run "srcclr test" during task execution. Useful for troubleshooting environment issues.
 
+### Classic Pipeline Example
+
+.. image:: https://github.com/MetLife/VeracodeCommunitySCA/raw/master/images/sca-extension.png
+    :width: 600px
+    :align: center
+
+### YAML Pipeline Example
+
+Below is sample YAML to insert into your build or release pipeline.
+
+``` steps:
+- task: gattjoe.VeracodeScaAdoExtension.custom-build-release-task.VeracodeCommunityScaAdoExtension@1
+  displayName: 'Veracode SCA Agent Scan - dotnet'
+  inputs:
+    scanType: url
+    scanTarget: 'https://github.com/srcclr/example-dotnet'
+    appName: dotnet
+    minCVSS: 0
+  env:
+    SRCCLR_API_TOKEN: $(SECRET)
+```
+
 ## Setting and Securing SRCCLR_API_TOKEN
 
 A high-level overview of setting secret values in YAML pipelines is [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables). To set secret values in Classic pipelines, refer to the documentation [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables).
 
 In either case, first create a variable in your build or release pipeline called SRCCLR_API_TOKEN, store the token in the field, and click on the lock icon to protect the token. Please note, once you protect the token, you can never retrieve the value again. Once you have created the SRCCLR_API_TOKEN variable, you have to populate it in the plug-in. Navigate to the "Environment Variables" section of the plug-in, create a variable called SRCCLR_API_TOKEN and, for value, input $(SRCCLR_API_TOKEN). 
+
+## Results
+
+Vulnerabilities (if any) are automatically published to the build or release pipeline. To view them, simply click on the "Tests" tab. For each vulnerability discovered, a "failed test" will appear in the results.
+
+.. image:: https://github.com/MetLife/VeracodeCommunitySCA/raw/master/images/sca-results.png
+    :width: 600px
+    :align: center
 
 ## Testing
 
