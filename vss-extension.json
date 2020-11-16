@@ -36,6 +36,9 @@
     "files": [
         {
             "path": "buildAndReleaseTask"
+        },
+        {
+            "path": "images", "addressable": true
         }
     ],
     "content": {
