@@ -29,7 +29,7 @@ There are two optional inputs: Application Name, and Test Agent capabilities
 
 ### Classic Pipeline Example
 
-![SCA Extension](https://github.com/MetLife/VeracodeCommunitySCA/blob/main/images/sca-extension.png)
+![SCA Extension](/images/sca-extension.png)
 
 ### YAML Pipeline Example
 
@@ -57,7 +57,7 @@ In either case, first create a variable in your build or release pipeline called
 
 Vulnerabilities (if any) are automatically published to the build or release pipeline. To view them, simply click on the "Tests" tab. For each vulnerability discovered, a "failed test" will appear in the results.
 
-![SCA Results](https://github.com/MetLife/VeracodeCommunitySCA/blob/main/images/sca-results.png)
+![SCA Results](/images/sca-results.png)
 
 ## Known Issues and Limitations of the Microsoft hosted Azure Pipeline agent
 
