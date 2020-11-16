@@ -59,15 +59,6 @@ Vulnerabilities (if any) are automatically published to the build or release pip
 
 ![SCA Results](https://github.com/MetLife/VeracodeCommunitySCA/raw/master/images/sca-results.png)
 
-## Testing
-
-To test the json result parsing, test-output.xml creation and coverage, run:
-
-```bash
-cd tests
-pytest -v test_parsescaresults.py --cov=../buildAndReleaseTask/. --cov-report=xml
-```
-
 ## Known Issues and Limitations of the Microsoft hosted Azure Pipeline agent
 
 If you intend to test a private endpoint (i.e., internal source code repository), it is probable that the Microsoft hosted agents do not have access to your internal network. As a result, please use a self-hosted Azure Pipeline agent. For self-hosted agents, Python >= 3.6.x is required. Please Note: Windows is currently not supported for the Veracode Community SCA Azure DevOps Extension.

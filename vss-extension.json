@@ -2,8 +2,8 @@
     "manifestVersion": 1,
     "id": "VeracodeCommunityScaAdoExtension",
     "name": "Veracode Community SCA Azure DevOps Extension",
-    "version": "1.0.3",
-    "publisher": "JoeGatt",
+    "version": "1.0.0",
+    "publisher": "gattjoe",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -13,11 +13,23 @@
     "tags": [
         "Security",
         "Azure Pipelines",
-        "Azure DevOps Extensions"
+        "Azure DevOps Extensions",
+        "Software Composition Analysis",
+        "Veracode",
+        "SCA"
       ],
     "categories": [
         "Azure Pipelines"
     ],
+    "links": {
+        "support": {
+          "uri": "mailto:joe@metlife.com"
+        }
+      },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/MetLife/VeracodeCommunitySCA"
+    },
     "icons": {
         "default": "images/extension-icon.png"
     },
@@ -26,6 +38,11 @@
             "path": "buildAndReleaseTask"
         }
     ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
     "contributions": [
         {
             "id": "custom-build-release-task",
