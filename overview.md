@@ -73,7 +73,3 @@ The location of the latest self-hosted agents is [here](https://github.com/micro
 ## References
 
 [Here](https://www.paraesthesia.com/archive/2020/02/25/tips-for-custom-azure-devops-build-tasks/) are some useful tips for developing tasks for Azure DevOps.
-
-## Feedback
-
-Send me mail at joe@metlife.com

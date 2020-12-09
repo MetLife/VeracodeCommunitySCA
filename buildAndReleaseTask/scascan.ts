@@ -22,7 +22,7 @@ async function run(): Promise<void> {
 
         // Get SRCCLR_API_TOKEN environmental variable
         const SRCCLR_API_TOKEN: string = <string>tl.getVariable('SRCCLR_API_TOKEN');
-        if (SRCCLR_API_TOKEN === undefined) {
+        if (SRCCLR_API_TOKEN === '' || SRCCLR_API_TOKEN === undefined) {
             throw new Error('You must define the SRCCLR_API_TOKEN environmental variable.');
         }
 
@@ -112,7 +112,8 @@ async function run(): Promise<void> {
 
             // Need error handling when selecting python for non Microsoft hosted agents
             // Install junitparser
-            const python3: trm.ToolRunner = tl.tool('python3');
+            const pythonPath: string = tl.which('python3');
+            const python3: trm.ToolRunner = tl.tool(pythonPath);
             python3.arg('-m');
             python3.arg('pip');
             python3.arg('install');
@@ -122,7 +123,7 @@ async function run(): Promise<void> {
             tl.setResult(tl.TaskResult.Succeeded, tl.loc('pipReturnCode', pipinstall));
 
             // Generate the results
-            const genResults: trm.ToolRunner = tl.tool('python3');
+            const genResults: trm.ToolRunner = tl.tool(pythonPath);
             genResults.arg(path.join(__dirname, 'parsescaresults.py'));
             genResults.arg('--target');
             genResults.arg(`${appName}`);

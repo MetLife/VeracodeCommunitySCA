@@ -11,11 +11,11 @@
   "author": "Joe Gatt",
   "license": "Apache-2.0",
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.11.1",
+    "azure-pipelines-task-lib": "^2.11.4",
     "azure-pipelines-tool-lib": "^0.13.2"
   },
   "devDependencies": {
-    "@types/node": "^14.11.2",
+    "@types/node": "^14.14.11",
     "@types/q": "^1.5.4"
   }
 }

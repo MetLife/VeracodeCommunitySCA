@@ -85,4 +85,4 @@ The location of the latest self-hosted agents is [here](https://github.com/micro
 
 ## Feedback
 
-Send me mail at joe@metlife.com
+Send me mail at gattjoseph@hotmail.com
