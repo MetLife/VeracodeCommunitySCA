@@ -23,7 +23,10 @@
     ],
     "links": {
         "support": {
-          "uri": "mailto:joe@metlife.com"
+          "uri": "mailto:gattjoseph@hotmail.com"
+        },
+        "issues": {
+            "uri": "https://github.com/MetLife/VeracodeCommunitySCA/issues"
         }
       },
     "repository": {
@@ -44,6 +47,9 @@
     "content": {
         "details": {
             "path": "overview.md"
+        },
+        "license": {
+            "path": "LICENSE.txt"
         }
     },
     "contributions": [
