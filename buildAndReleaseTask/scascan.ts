@@ -17,8 +17,8 @@ const tempPath: string = <string>tl.getVariable('Agent.TempDirectory');
 if (tempPath !== undefined) {
     // Per https://help.veracode.com/r/c_sc_ci_script if we set
     // the CACHE_DIR variable, we can direct where the files are downloaded to
-    const cacheDir = tl.setVariable('CACHE_DIR', tempPath);
-    console.log(`CACHE_DIR: ${cacheDir}`)
+    tl.setVariable('CACHE_DIR', tempPath);
+    console.log(`CACHE_DIR: ${tempPath}`);
 }
 
 
@@ -149,7 +149,7 @@ async function runScan(scanType: string,
         const pipe: trm.ToolRunner = curl.pipeExecOutputToTool(sh);
         await pipe.exec();
 
-        return;
+        return tl.setResult(tl.TaskResult.Succeeded, "SCA scan completed.");
 
     } catch (err) {
         throw new Error(err);
@@ -173,7 +173,7 @@ async function testSCA(): Promise<void> {
         const pipe: trm.ToolRunner = curl.pipeExecOutputToTool(sh);
         await pipe.exec();
 
-        return;
+        return tl.setResult(tl.TaskResult.Succeeded, "SCA test completed.");
 
     } catch (err) {
         throw new Error(err);
