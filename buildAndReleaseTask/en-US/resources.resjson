@@ -1,5 +1,0 @@
-{
-  "loc.messages.curlReturnCode": "Task exited with return code: %s",
-  "loc.messages.bashReturnCode": "Task exited with return code: %s",
-  "loc.messages.pipReturnCode": "Task exited with return code: %s"
-}

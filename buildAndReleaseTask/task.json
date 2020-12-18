@@ -89,11 +89,6 @@
         }
     },
     "showEnvironmentVariables": true,
-    "messages": {
-        "curlReturnCode": "Task exited with return code: %s",
-        "bashReturnCode": "Task exited with return code: %s",
-        "pipReturnCode": "Task exited with return code: %s"
-    },
     "visibility": [
         "Build",
         "Release"
