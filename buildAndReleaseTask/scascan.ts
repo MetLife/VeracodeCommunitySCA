@@ -8,6 +8,20 @@ import * as tl from 'azure-pipelines-task-lib/task';
 import * as trm from 'azure-pipelines-task-lib/toolrunner';
 import * as path from 'path';
 
+/**
+ * Get Agent.TempDirectory which is a temp folder that is cleaned after each pipeline job.
+ * This is where we will store the Veracode SCA tool so we do not take up too much disk space
+ * on self hosted agents.
+ */
+const tempPath: string = <string>tl.getVariable('Agent.TempDirectory');
+if (tempPath !== undefined) {
+    // Per https://help.veracode.com/r/c_sc_ci_script if we set
+    // the CACHE_DIR variable, we can direct where the files are downloaded to
+    tl.setVariable('CACHE_DIR', tempPath);
+    console.log(`CACHE_DIR: ${tempPath}`);
+}
+
+
 async function run(): Promise<void> {
     try {
         tl.setResourcePath(path.join(__dirname, 'task.json'));
@@ -48,93 +62,54 @@ async function run(): Promise<void> {
 
         //This only works on linux or MacOs Agents
         if (agentPlatform === 'linux' || agentPlatform === 'darwin') {
-
-            try {
-                // Is srcclr already installed?
-                const srcclrPath: string = tl.which('srcclr', true);
-                console.log('Found SCA Agent install here: ' + `${srcclrPath}`);
-
-            } catch {
-                // Install srcclr
-                const curlPath: string = tl.which('curl', true);
-                const shPath: string = tl.which('sh', true);
-
-                // Install SCA Agent
-                const curl: trm.ToolRunner = tl.tool(curlPath);
-                curl.arg('-sSL');
-                curl.arg('https://www.sourceclear.com/install');
-                const sh: trm.ToolRunner = tl.tool(shPath);
-                // On self-hosted agents this may not work if the agent is not running as root
-                const pipe: trm.ToolRunner = curl.pipeExecOutputToTool(sh);
-                const scaAgentInstall: number = await pipe.exec();
-                tl.setResult(tl.TaskResult.Succeeded, tl.loc('curlReturnCode', scaAgentInstall));
-
-            }
-
+   
             // Test the environment to see which collectors are available, equivalent to 'srcclr test'
             if (testAgent === true) {
-                const scaAgentTest: trm.ToolRunner = tl.tool('srcclr');
-                scaAgentTest.arg('test');
-                const scaAgentTestResult: number = await scaAgentTest.exec();
-                tl.setResult(tl.TaskResult.Succeeded, tl.loc('bashReturnCode', scaAgentTestResult));
+                await testSCA();
             }
+            
+            // Run the scan
+            await runScan(scanType, scanTarget);
 
-            // Scan against an artifact directory
-            if (scanType === 'directory') {
-                const scanDirectory: trm.ToolRunner = tl.tool('srcclr');
-                scanDirectory.arg('scan');
-                scanDirectory.arg(`${scanTarget}`);
-                scanDirectory.arg('--json');
-                scanDirectory.arg('scaresults.json');
-                const directoryResults: number = await scanDirectory.exec();
-                tl.setResult(tl.TaskResult.Succeeded, tl.loc('bashReturnCode', directoryResults));
-            // Scan against a URL - Need to make sure it begins with http(s)
-            } else if (scanType === 'url') {
-                const scanUrl: trm.ToolRunner = tl.tool('srcclr');
-                scanUrl.arg('scan');
-                scanUrl.arg('--url');
-                scanUrl.arg(`${scanTarget}`);
-                scanUrl.arg('--json');
-                scanUrl.arg('scaresults.json');
-                const urlResults: number = await scanUrl.exec();
-                tl.setResult(tl.TaskResult.Succeeded, tl.loc('bashReturnCode', urlResults));
-            // Scan a Docker image
-            } else if (scanType === 'image') {
-                const scanDockerImage: trm.ToolRunner = tl.tool('srcclr');
-                scanDockerImage.arg('scan');
-                scanDockerImage.arg('--image');
-                scanDockerImage.arg(`${scanTarget}`);
-                scanDockerImage.arg('--json');
-                scanDockerImage.arg('scaresults.json');
-                const dockerResults: number = await scanDockerImage.exec();
-                tl. setResult(tl.TaskResult.Succeeded, tl.loc('bashReturnCode', dockerResults));
-            }
-
-            // Need error handling when selecting python for non Microsoft hosted agents
-            // Install junitparser
+            // Find the python3 installation
             const pythonPath: string = tl.which('python3');
-            const python3: trm.ToolRunner = tl.tool(pythonPath);
-            python3.arg('-m');
-            python3.arg('pip');
-            python3.arg('install');
-            python3.arg('--upgrade');
-            python3.arg('junitparser');
-            const pipinstall: number = await python3.exec();
-            tl.setResult(tl.TaskResult.Succeeded, tl.loc('pipReturnCode', pipinstall));
 
-            // Generate the results
-            const genResults: trm.ToolRunner = tl.tool(pythonPath);
-            genResults.arg(path.join(__dirname, 'parsescaresults.py'));
-            genResults.arg('--target');
-            genResults.arg(`${appName}`);
-            genResults.arg('--mincvss');
-            genResults.arg(`${minCVSS}`);
-            genResults.arg('--failbuild');
-            genResults.arg(`${failBuild}`);
-            const publishResults: number = await genResults.exec();
-            tl.setResult(tl.TaskResult.Succeeded, tl.loc('bashReturnCode', publishResults));
+            try {
+                // Install junitparser
+                const python3: trm.ToolRunner = tl.tool(pythonPath);
+                python3.arg('-m');
+                python3.arg('pip');
+                python3.arg('install');
+                python3.arg('--upgrade');
+                python3.arg('pip');
+                python3.arg('junitparser');
+                // Run the command
+                await python3.exec();
+                tl.setResult(tl.TaskResult.Succeeded, "pip install was successful.");
 
-            return;
+            } catch(err) {
+
+                return tl.setResult(tl.TaskResult.Failed, "pip install failed.");
+            }
+
+            try {
+                // Generate the results
+                const genResults: trm.ToolRunner = tl.tool(pythonPath);
+                genResults.arg(path.join(__dirname, 'parsescaresults.py'));
+                genResults.arg('--target');
+                genResults.arg(`${appName}`);
+                genResults.arg('--mincvss');
+                genResults.arg(`${minCVSS}`);
+                genResults.arg('--failbuild');
+                genResults.arg(`${failBuild}`);
+                // Run the command
+                await genResults.exec();
+                return tl.setResult(tl.TaskResult.Succeeded, "SCA result parsing and upload was successful.");
+
+            } catch(err) {
+
+                return tl.setResult(tl.TaskResult.Failed, "SCA result parsing and upload failed.");
+            }
 
         } else {
             // Need to add Windows support
@@ -147,6 +122,62 @@ async function run(): Promise<void> {
         tl.setResult(tl.TaskResult.Failed, err.message);
 
         return;
+    }
+}
+
+// Run the SCA scan
+async function runScan(scanType: string,
+                       scanTarget: string): Promise<void> {
+
+    try {
+        const curlPath: string = tl.which('curl', true);
+        const shPath: string = tl.which('sh', true);
+        const curl: trm.ToolRunner = tl.tool(curlPath);
+        curl.arg('-sSL');
+        curl.arg('https://download.sourceclear.com/ci.sh');
+        const sh: trm.ToolRunner = tl.tool(shPath);
+        sh.arg('-s');
+        sh.arg('--');
+        sh.arg('scan');
+        if (scanType !== 'directory') {
+            sh.arg(`--${scanType}`);
+        }
+        sh.arg(`${scanTarget}`);
+        sh.arg('--recursive');
+        sh.arg('--json');
+        sh.arg('scaresults.json');
+        const pipe: trm.ToolRunner = curl.pipeExecOutputToTool(sh);
+        await pipe.exec();
+
+        return tl.setResult(tl.TaskResult.Succeeded, "SCA scan completed.");
+
+    } catch (err) {
+        throw new Error(err);
+
+    }
+}
+
+// Test the SCA scan environment
+async function testSCA(): Promise<void> {
+
+    try {
+        const curlPath: string = tl.which('curl', true);
+        const shPath: string = tl.which('sh', true);
+        const curl: trm.ToolRunner = tl.tool(curlPath);
+        curl.arg('-sSL');
+        curl.arg('https://download.sourceclear.com/ci.sh');
+        const sh: trm.ToolRunner = tl.tool(shPath);
+        sh.arg('-s');
+        sh.arg('--');
+        sh.arg('test');
+        const pipe: trm.ToolRunner = curl.pipeExecOutputToTool(sh);
+        await pipe.exec();
+
+        return tl.setResult(tl.TaskResult.Succeeded, "SCA test completed.");
+
+    } catch (err) {
+        throw new Error(err);
+
     }
 }
 
