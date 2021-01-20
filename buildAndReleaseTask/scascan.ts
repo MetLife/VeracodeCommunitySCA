@@ -82,7 +82,7 @@ async function run(): Promise<void> {
                 python3.arg('install');
                 python3.arg('--upgrade');
                 python3.arg('pip');
-                python3.arg('junitparser');
+                python3.arg('junitparser==1.6.3');
                 // Run the command
                 await python3.exec();
                 tl.setResult(tl.TaskResult.Succeeded, "pip install was successful.");
