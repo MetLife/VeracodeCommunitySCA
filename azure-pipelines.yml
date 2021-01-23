@@ -1,0 +1,48 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+stages:
+- stage: 'Python3_parsing_tests'
+  jobs:
+  - job:
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    strategy:
+      matrix:
+        Python36:
+          python.version: '3.6'
+        Python37:
+          python.version: '3.7'
+        Python38:
+          python.version: '3.8'
+        Python39:
+          python.version: '3.9'
+
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(python.version)'
+
+    - script: python -m pip install --upgrade pip setuptools wheel
+      displayName: 'Install tools'
+
+
+    - script: python -m pip install --upgrade tox
+      displayName: 'Install Tox'
+
+    - script: tox -e py
+      displayName: 'Run Tox'
+
+    - task: PublishTestResults@2
+      condition: succeededOrFailed()
+      inputs:
+        testResultsFiles: '**/test-output.xml'
+        testRunTitle: 'Publish test results for Python $(python.version)'
+
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codecoveragetool: Cobertura
+        summaryFileLocation: '**/coverage.xml'
