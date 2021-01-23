@@ -1,4 +1,5 @@
 """ Tests to ensure vulnerabilitiy results are parsed properly """
+import os
 import json
 
 from buildAndReleaseTask.parsescaresults import parse_sca_json, write_output
@@ -10,8 +11,11 @@ def test_parse_javascript_results():
     To generate results:
     srcclr scan --url https://github.com/gattjoe/example-javascript --json example-javascript.json
     """
+
+    output = os.path.normpath(os.path.abspath(os.path.expanduser(os.path.expandvars("example-javascript.json"))))
+
     # Open the Veracode SCA JSON results
-    with open("example-javascript.json", "r") as sca_results:
+    with open(output, "r") as sca_results:
         data = json.load(sca_results)
 
     # Include all CVSS in the output
