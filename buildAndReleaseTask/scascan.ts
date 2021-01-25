@@ -80,9 +80,8 @@ async function run(): Promise<void> {
                 python3.arg('-m');
                 python3.arg('pip');
                 python3.arg('install');
-                python3.arg('--upgrade');
-                python3.arg('pip');
-                python3.arg('junitparser==1.6.3');
+                python3.arg('-r');
+                python3.arg(path.join(__dirname, 'requirements.txt'));
                 // Run the command
                 await python3.exec();
                 tl.setResult(tl.TaskResult.Succeeded, "pip install was successful.");
