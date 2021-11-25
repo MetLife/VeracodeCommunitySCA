@@ -116,7 +116,7 @@ async function run(): Promise<void> {
 
         }
 
-    } catch (err) {
+    } catch (err: any) {
 
         tl.setResult(tl.TaskResult.Failed, err.message);
 
@@ -150,7 +150,7 @@ async function runScan(scanType: string,
 
         return tl.setResult(tl.TaskResult.Succeeded, "SCA scan completed.");
 
-    } catch (err) {
+    } catch (err: any) {
         throw new Error(err);
 
     }
@@ -174,7 +174,7 @@ async function testSCA(): Promise<void> {
 
         return tl.setResult(tl.TaskResult.Succeeded, "SCA test completed.");
 
-    } catch (err) {
+    } catch (err: any) {
         throw new Error(err);
 
     }
