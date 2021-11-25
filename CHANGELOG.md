@@ -13,4 +13,8 @@
 - Added support for junitparser 2.0.0 (fixes breaking change)
 - Removed hardcoded python package configuration from scascan.ts
 - Added tox tests for Python
- 
+
+# v1.0.10
+- Align changelog version scheme with Azure DevOps Marketplace
+- Version up all npm and python package dependencies
+- Explicitly set catch variables to any, which was the default typescript <= 4.3
