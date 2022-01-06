@@ -4,11 +4,11 @@ This project is community contributed and is not supported by Veracode. For a li
 
 ## Overview
 
-Seamlessly integrate Veracode Agent-Based SCA scans with Azure DevOps build or release pipelines. Please note, the Agent-Based scan method is not the same thing as the "Upload and Scan" Method. You can find an overview of each method on Veracode's website [here](https://help.veracode.com/reader/9nOkCbEfhLEzMgzr2zCv5Q/8ogXM1j_wRm_AYmyKdrdoQ).
+Seamlessly integrate Veracode Agent-Based SCA scans with Azure DevOps build or release pipelines. Please note, the Agent-Based scan method is not the same thing as the "Upload and Scan" Method. You can find an overview of each method on Veracode's website [here](https://docs.veracode.com/r/c_integrated_benefits).
 
 ## Requirements
 
-To run this plug-in in your build or release pipeline, you must be an existing Veracode SCA customer. Additionally, you need a valid SRCCLR_API_TOKEN to use this plug-in. Documentation for how to create a token for Continuous Integration (CI) activities can be found on Veracode's website [here](https://help.veracode.com/reader/hHHR3gv0wYc2WbCclECf_A/OdKcJQRbCpa6eUTX03z~Ag). There are no specific instructions for Azure DevOps; however, if you follow the directions for CircleCI you can successfully generate a SRCCLR_API_TOKEN to be used with this plug-in.
+To run this plug-in in your build or release pipeline, you must be an existing Veracode SCA customer. Additionally, you need a valid SRCCLR_API_TOKEN to use this plug-in. Documentation for how to create a token for Continuous Integration (CI) activities can be found on Veracode's website [here](https://docs.veracode.com/r/Integrate_Veracode_SCA_Agent_Based_Scanning_with_Your_CI_Projects). There are no specific instructions for Azure DevOps; however, if you follow the directions for CircleCI you can successfully generate a SRCCLR_API_TOKEN to be used with this plug-in.
 
 Currently, this plug-in will only run on a Linux or Mac Azure Pipelines agent (either hosted or self-hosted). Additionally, the agent requires Python > 3.6.
 
@@ -51,7 +51,7 @@ Below is sample YAML to insert into your build or release pipeline.
 
 A high-level overview of setting secret values in YAML pipelines is [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables). To set secret values in Classic pipelines, refer to the documentation [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables).
 
-In either case, first create a variable in your build or release pipeline called SRCCLR_API_TOKEN, store the token in the field, and click on the lock icon to protect the token. Please note, once you protect the token, you can never retrieve the value again. Once you have created the SRCCLR_API_TOKEN variable, you have to populate it in the plug-in. Navigate to the "Environment Variables" section of the plug-in, create a variable called SRCCLR_API_TOKEN and, for value, input $(SRCCLR_API_TOKEN). 
+In either case, first create a variable in your build or release pipeline called SRCCLR_API_TOKEN, store the token in the field, and click on the lock icon to protect the token. Please note, once you protect the token, you can never retrieve the value again. Once you have created the SRCCLR_API_TOKEN variable, you have to populate it in the plug-in. Navigate to the "Environment Variables" section of the plug-in, create a variable called SRCCLR_API_TOKEN and, for value, input $(SRCCLR_API_TOKEN).
 
 ## Results
 
