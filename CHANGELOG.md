@@ -18,3 +18,8 @@
 - Align changelog version scheme with Azure DevOps Marketplace
 - Version up all npm and python package dependencies
 - Explicitly set catch variables to any, which was the default typescript <= 4.3
+
+# v1.0.11
+- Fixed a logic bug where having no vulnerabilities > min CVSS score would not yield any output
+- Created docker development environment in VS Code
+- Version up all npm and python package dependencies

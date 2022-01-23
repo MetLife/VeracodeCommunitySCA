@@ -6,7 +6,7 @@ from junitparser import JUnitXml
 
 
 def test_parse_javascript_results():
-    """ Test parsing a fork of the srcclr/example-javascript repo
+    """Test parsing a fork of the srcclr/example-javascript repo
     To generate results:
     srcclr scan --url https://github.com/gattjoe/example-javascript --json example-javascript.json
     """
@@ -29,8 +29,15 @@ def test_parse_javascript_results():
     assert flaw_counter == 59
 
     actual_high_vulns = []
-    expected_high_vulns = ["console-io", "ms", "moment", "sequelize", "sequelize",
-                           "lodash", "send"]
+    expected_high_vulns = [
+        "console-io",
+        "ms",
+        "moment",
+        "sequelize",
+        "sequelize",
+        "lodash",
+        "send",
+    ]
 
     for flaw in parsed_data:
         if flaw["CVSS"] >= 7.5:
@@ -41,9 +48,9 @@ def test_parse_javascript_results():
 
 
 def test_parse_dotnet_results():
-    """ Test parsing a fork of the srcclr/example-dotnet repo
+    """Test parsing a fork of the srcclr/example-dotnet repo
     To generate results:
-    srcclr scan --url https://github.com/gattjoe/example-dotnet --json example-dotnet.json """
+    srcclr scan --url https://github.com/gattjoe/example-dotnet --json example-dotnet.json"""
 
     # Open the Veracode SCA JSON results
     with open("example-dotnet.json", "r") as sca_results:
@@ -64,8 +71,13 @@ def test_parse_dotnet_results():
     assert flaw_counter == 11
 
     actual_high_vulns = []
-    expected_high_vulns = ["log4net", "GSF.Core", "GSF.Security",
-                           "recurly-api-client", "recurly-api-client"]
+    expected_high_vulns = [
+        "log4net",
+        "GSF.Core",
+        "GSF.Security",
+        "recurly-api-client",
+        "recurly-api-client",
+    ]
 
     for flaw in parsed_data:
         if flaw["CVSS"] >= 7.5:
@@ -76,9 +88,9 @@ def test_parse_dotnet_results():
 
 
 def test_parse_ruby_results():
-    """ Test parsing a fork of the srcclr/example-ruby repo
+    """Test parsing a fork of the srcclr/example-ruby repo
     To generate results:
-    srcclr scan --url https://github.com/gattjoe/example-ruby --json example-ruby.json """
+    srcclr scan --url https://github.com/gattjoe/example-ruby --json example-ruby.json"""
 
     # Open the Veracode SCA JSON results
     with open("example-ruby.json", "r") as sca_results:
@@ -99,9 +111,19 @@ def test_parse_ruby_results():
     assert flaw_counter == 58
 
     actual_high_vulns = []
-    expected_high_vulns = ["nokogiri", "nokogiri", "nokogiri", "nokogiri", "nokogiri", "nokogiri",
-                           "actionpack", "actionview", "devise", "paperclip", "festivaltts4r"
-                           "lingq"]
+    expected_high_vulns = [
+        "nokogiri",
+        "nokogiri",
+        "nokogiri",
+        "nokogiri",
+        "nokogiri",
+        "nokogiri",
+        "actionpack",
+        "actionview",
+        "devise",
+        "paperclip",
+        "festivaltts4r" "lingq",
+    ]
 
     for flaw in parsed_data:
         if flaw["CVSS"] >= 7.5:
@@ -112,9 +134,9 @@ def test_parse_ruby_results():
 
 
 def test_parse_jsnpm_results():
-    """ Test parsing a fork of the srcclr/test-js-npm repo
+    """Test parsing a fork of the srcclr/test-js-npm repo
     To generate results:
-    srcclr scan --url https://github.com/gattjoe/test-js-npm --json example-jsnpm.json """
+    srcclr scan --url https://github.com/gattjoe/test-js-npm --json example-jsnpm.json"""
 
     # Open the Veracode SCA JSON results
     with open("example-jsnpm.json", "r") as sca_results:
@@ -135,8 +157,18 @@ def test_parse_jsnpm_results():
     assert flaw_counter == 31
 
     actual_high_vulns = []
-    expected_high_vulns = ["semver", "ms", "uglify-js", "semver", "ms", "lodash",
-                           "lodash", "morgan", "extend", "lodash"]
+    expected_high_vulns = [
+        "semver",
+        "ms",
+        "uglify-js",
+        "semver",
+        "ms",
+        "lodash",
+        "lodash",
+        "morgan",
+        "extend",
+        "lodash",
+    ]
 
     for flaw in parsed_data:
         if flaw["CVSS"] >= 7.5:
@@ -147,9 +179,9 @@ def test_parse_jsnpm_results():
 
 
 def test_parse_python_results():
-    """ Test parsing a fork of the srcclr/example-python repo
+    """Test parsing a fork of the srcclr/example-python repo
     To generate results:
-    srcclr scan --url https://github.com/gattjoe/example-python3-pip --json example-python.json """
+    srcclr scan --url https://github.com/gattjoe/example-python3-pip --json example-python.json"""
 
     # Open the Veracode SCA JSON results
     with open("example-python.json", "r") as sca_results:
@@ -181,7 +213,7 @@ def test_parse_python_results():
 
 
 def test_write_results_no_vulns():
-    """ Test parsing results and writing test-output.xml """
+    """Test parsing results and writing test-output.xml"""
 
     # Open the Veracode SCA JSON results
     with open("example-novulns.json", "r") as sca_results:
@@ -194,16 +226,16 @@ def test_write_results_no_vulns():
     write_output("No vulns", parsed_data)
 
     # Get test-output.xml
-    xml = JUnitXml.fromfile('test-output.xml')
+    xml = JUnitXml.fromfile("test-output.xml")
 
     # Assert there are no vulnerabilities in the output
     for suite in xml:
         for case in suite:
-            assert case.name == 'No vulnerabilities'
+            assert case.name == "No vulnerabilities"
 
 
 def test_write_results_vulns():
-    """ Test parsing results and writing test-output.xml """
+    """Test parsing results and writing test-output.xml"""
 
     # Open the Veracode SCA JSON results
     with open("example-dotnet.json", "r") as sca_results:
@@ -216,7 +248,7 @@ def test_write_results_vulns():
     write_output("dotnet vulns", parsed_data)
 
     # Get test-output.xml
-    xml = JUnitXml.fromfile('test-output.xml')
+    xml = JUnitXml.fromfile("test-output.xml")
 
     # Assert there are 15 vulnerabilities in the output
     case_counter = 0
@@ -232,9 +264,9 @@ def test_write_results_vulns():
 
 
 def test_multi_instance_of_vuln():
-    """ Test parsing of results that have multiple instances
-     of a vulnerability but in two or more different libraries """
-    
+    """Test parsing of results that have multiple instances
+    of a vulnerability but in two or more different libraries"""
+
     # Open the Veracode SCA JSON results
     with open("example-dotnet.json", "r") as sca_results:
         data = json.load(sca_results)
@@ -252,3 +284,23 @@ def test_multi_instance_of_vuln():
             actual_dupe_vulns.append(flaw["Vulnerable Library"])
 
     assert expected_dupe_vulns.sort() == actual_dupe_vulns.sort()
+
+
+def test_parse_zero_results():
+    """Test parsing a fork of the srcclr/example-dotnet repo
+    To generate results:
+    srcclr scan --url https://github.com/gattjoe/example-dotnet --json example-dotnet.json"""
+
+    # Open the Veracode SCA JSON results
+    with open("example-dotnet.json", "r") as sca_results:
+        data = json.load(sca_results)
+
+    min_CVSS = 8
+
+    # Include CVSS >= 8 in the output (expect 0)
+    parsed_data = parse_sca_json(data, min_CVSS)
+
+    # As of srcclr 3.7.1 there are 15 detected vulns in this example
+    assert parsed_data == [
+        {"Results": f"No vulnerabilities >= the min CVSS score {min_CVSS}."}
+    ]
