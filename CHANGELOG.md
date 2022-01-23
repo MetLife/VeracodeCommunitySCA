@@ -24,3 +24,4 @@
 - Created docker development environment in VS Code
 - Version up all npm and python package dependencies
 - Add python 3.10 to tox
+- Removed unused function from parsescaresults.py

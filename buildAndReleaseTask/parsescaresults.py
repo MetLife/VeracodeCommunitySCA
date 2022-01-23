@@ -2,7 +2,6 @@
 import argparse
 import json
 import os
-import subprocess
 from typing import Dict, List
 
 from junitparser import TestCase, TestSuite, JUnitXml, Failure
@@ -133,34 +132,6 @@ def write_output(target: str, results: list) -> None:
     xml = JUnitXml()
     xml.add_testsuite(suite)
     xml.write("test-output.xml")
-
-
-def get_parent_package(transitive_package: str) -> str:
-    """npm list command: submit the vulnerable package
-    to get the top level package that needs to be patched.
-    I still need to do npm ci --ignore-scripts before doing this"""
-
-    list_command = f"npm list {transitive_package} --json"
-
-    _check = None
-
-    try:
-        _check = subprocess.run(
-            list_command, capture_output=True, shell=True, check=True
-        )
-
-    except subprocess.SubprocessError as err:
-        print(err)  # This will fail if it can't find npm on the system
-
-    # Load the json response
-    npm_output = json.loads(_check.stdout)
-
-    # Get the top-level package
-    top_package = ""
-    for key, value in npm_output["dependencies"].items():
-        top_package = value["from"]
-
-    return top_package
 
 
 def main() -> None:
