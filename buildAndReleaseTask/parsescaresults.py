@@ -106,13 +106,18 @@ def create_result_dict() -> Dict:
     }
 
 
-def write_output(target: str, results: list) -> None:
+def write_output(target: str, results: list, min_cvss: int) -> None:
     """Write scan results in junitxml format"""
 
     suite = TestSuite(f"{target}")
 
+    results: List = [
+        {"Results": "No vulnerabilities."},
+        {"Results": f"No vulnerabilities >= the min CVSS score {min_cvss}."}
+    ]
+
     for result in results:
-        if result != {"Results": "No vulnerabilities."}:
+        if result != results:
             test_case = TestCase(result["Vulnerable Library"])
             test_case.name = (
                 result["Vulnerable Library"]
@@ -150,7 +155,7 @@ def main() -> None:
     results = parse_sca_json(data, min_cvss)
 
     # Generate test-output.xml
-    write_output(target, results)
+    write_output(target, results, min_cvss)
 
     # Remove scaresults.json file
     os.remove("scaresults.json")
