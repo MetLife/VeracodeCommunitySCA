@@ -111,13 +111,13 @@ def write_output(target: str, results: list, min_cvss: int) -> None:
 
     suite = TestSuite(f"{target}")
 
-    results: List = [
+    no_vulns: List = [
         {"Results": "No vulnerabilities."},
         {"Results": f"No vulnerabilities >= the min CVSS score {min_cvss}."}
     ]
 
     for result in results:
-        if result != results:
+        if result not in no_vulns:
             test_case = TestCase(result["Vulnerable Library"])
             test_case.name = (
                 result["Vulnerable Library"]

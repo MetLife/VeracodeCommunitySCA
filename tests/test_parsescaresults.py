@@ -223,7 +223,7 @@ def test_write_results_no_vulns():
     parsed_data = parse_sca_json(data, 0)
 
     # Create the test-output.xml
-    write_output("No vulns", parsed_data)
+    write_output("No vulns", parsed_data, 0)
 
     # Get test-output.xml
     xml = JUnitXml.fromfile("test-output.xml")
@@ -245,7 +245,7 @@ def test_write_results_vulns():
     parsed_data = parse_sca_json(data, 0)
 
     # Create the test-output.xml
-    write_output("dotnet vulns", parsed_data)
+    write_output("dotnet vulns", parsed_data, 0)
 
     # Get test-output.xml
     xml = JUnitXml.fromfile("test-output.xml")
@@ -304,3 +304,27 @@ def test_parse_zero_results():
     assert parsed_data == [
         {"Results": f"No vulnerabilities >= the min CVSS score {min_CVSS}."}
     ]
+
+
+def test_write_results_no_vulns_min_CVSS():
+    """Test parsing results and writing test-output.xml with no vulns"""
+
+    # Open the Veracode SCA JSON results
+    with open("example-dotnet.json", "r") as sca_results:
+        data = json.load(sca_results)
+
+    min_CVSS = 8
+
+    # Include CVSS >= 8 in the output (expect 0)
+    parsed_data = parse_sca_json(data, min_CVSS)
+
+    # Create the test-output.xml
+    write_output("dotnet vulns", parsed_data, min_CVSS)
+
+    # Get test-output.xml
+    xml = JUnitXml.fromfile("test-output.xml")
+
+    # Assert there are no vulnerabilities in the output
+    for suite in xml:
+        for case in suite:
+            assert case.name == "No vulnerabilities"
