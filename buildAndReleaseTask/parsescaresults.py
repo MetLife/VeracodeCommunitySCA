@@ -113,7 +113,7 @@ def write_output(target: str, results: list, min_cvss: int) -> None:
 
     no_vulns: List = [
         {"Results": "No vulnerabilities."},
-        {"Results": f"No vulnerabilities >= the min CVSS score {min_cvss}."}
+        {"Results": f"No vulnerabilities >= the min CVSS score {min_cvss}."},
     ]
 
     for result in results:

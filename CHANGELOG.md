@@ -20,8 +20,12 @@
 - Explicitly set catch variables to any, which was the default typescript <= 4.3
 
 # v1.0.11
-- Fixed a logic bug where having no vulnerabilities > min CVSS score would not yield any output
+- Fixed a logic bug where having no vulnerabilities > min CVSS score would not yield any output. Thanks to [@aspatel-metlife](https://github.com/aspatel-metlife)
 - Created docker development environment in VS Code
 - Version up all npm and python package dependencies
 - Add python 3.10 to tox
-- Removed unused function from parsescaresults.py
+- Removed an unused function from parsescaresults.py
+- Ran black on parsescaresults.py
+
+# v1.0.12
+- Fixed an issue writing test-output.xml when there are no vulnerabilities > min CVSS. Thanks to [@Dean2768](https://github.com/Dean2678)
