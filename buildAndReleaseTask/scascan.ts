@@ -31,6 +31,7 @@ async function run(): Promise<void> {
         const scanTarget: string = <string>tl.getInput('scanTarget', true);
         const testAgent: boolean = <boolean>tl.getBoolInput('testAgent', true);
         const minCVSS: string = <string>tl.getInput('minCVSS', true);
+        const recursiveScan: boolean = <boolean>tl.getBoolInput('recursiveScan', true)
         const failBuild: boolean = <boolean>tl.getBoolInput('failBuild', true);
         let appName: string | undefined = <string>tl.getInput('appName');
 
@@ -48,6 +49,7 @@ async function run(): Promise<void> {
         console.log('Scan Type: ' + `${scanType} selected`);
         console.log('Scan Target: ' + `${scanTarget}`);
         console.log('Minimum CVSS Score: ' + `${minCVSS} selected`);
+        console.log('Recursive scan? ' + `${recursiveScan}`);
         console.log('Fail build? ' + `${failBuild}`);
 
         // Set the scope of the scan if defined
@@ -62,14 +64,14 @@ async function run(): Promise<void> {
 
         //This only works on linux or MacOs Agents
         if (agentPlatform === 'linux' || agentPlatform === 'darwin') {
-   
+
             // Test the environment to see which collectors are available, equivalent to 'srcclr test'
             if (testAgent === true) {
                 await testSCA();
             }
-            
+
             // Run the scan
-            await runScan(scanType, scanTarget);
+            await runScan(scanType, scanTarget, recursiveScan);
 
             // Find the python3 installation
             const pythonPath: string = tl.which('python3');
@@ -86,7 +88,7 @@ async function run(): Promise<void> {
                 await python3.exec();
                 tl.setResult(tl.TaskResult.Succeeded, "pip install was successful.");
 
-            } catch(err) {
+            } catch (err) {
 
                 return tl.setResult(tl.TaskResult.Failed, "pip install failed.");
             }
@@ -105,7 +107,7 @@ async function run(): Promise<void> {
                 await genResults.exec();
                 return tl.setResult(tl.TaskResult.Succeeded, "SCA result parsing and upload was successful.");
 
-            } catch(err) {
+            } catch (err) {
 
                 return tl.setResult(tl.TaskResult.Failed, "SCA result parsing and upload failed.");
             }
@@ -116,17 +118,19 @@ async function run(): Promise<void> {
 
         }
 
-    } catch (err: any) {
-
-        tl.setResult(tl.TaskResult.Failed, err.message);
-
+    } catch (err) {
+        if (err instanceof Error) {
+            tl.setResult(tl.TaskResult.Failed, err.message);
+        } else {
+            console.log('Unexpected error', err);
+        }
         return;
     }
 }
 
 // Run the SCA scan
 async function runScan(scanType: string,
-                       scanTarget: string): Promise<void> {
+    scanTarget: string, recursiveScan: boolean): Promise<void> {
 
     try {
         const curlPath: string = tl.which('curl', true);
@@ -142,7 +146,9 @@ async function runScan(scanType: string,
             sh.arg(`--${scanType}`);
         }
         sh.arg(`${scanTarget}`);
-        sh.arg('--recursive');
+        if (recursiveScan === true) {
+            sh.arg('--recursive');
+        }
         sh.arg('--json');
         sh.arg('scaresults.json');
         const pipe: trm.ToolRunner = curl.pipeExecOutputToTool(sh);
@@ -150,9 +156,12 @@ async function runScan(scanType: string,
 
         return tl.setResult(tl.TaskResult.Succeeded, "SCA scan completed.");
 
-    } catch (err: any) {
-        throw new Error(err);
-
+    } catch (err) {
+        if (err instanceof Error) {
+            tl.setResult(tl.TaskResult.Failed, err.message);
+        } else {
+            console.log('Unexpected error', err);
+        }
     }
 }
 
@@ -174,9 +183,12 @@ async function testSCA(): Promise<void> {
 
         return tl.setResult(tl.TaskResult.Succeeded, "SCA test completed.");
 
-    } catch (err: any) {
-        throw new Error(err);
-
+    } catch (err) {
+        if (err instanceof Error) {
+            tl.setResult(tl.TaskResult.Failed, err.message);
+        } else {
+            console.log('Unexpected error', err);
+        }
     }
 }
 

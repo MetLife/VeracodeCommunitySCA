@@ -29,3 +29,9 @@
 
 # v1.0.12
 - Fixed an issue writing test-output.xml when there are no vulnerabilities > min CVSS. Thanks to [@Dean2768](https://github.com/Dean2678)
+
+# v1.0.13
+- Added the ability to toggle recursive scans, default is on
+- Added eslint to the project
+- Version up all npm package dependencies
+- Improved Error handling

@@ -11,12 +11,12 @@ ENV LANG C.UTF-8
 RUN useradd -m veracodesca
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-		ca-certificates \
-		netbase \
-        curl \
-        git \
-        bash-completion \
-	&& rm -rf /var/lib/apt/lists/*
+    ca-certificates \
+    netbase \
+    curl \
+    git \
+    bash-completion \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir --quiet --upgrade pip && \
     pip install --no-cache-dir --quiet --upgrade setuptools && \
@@ -42,7 +42,9 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 # Install VeracodeSCA Packages
 COPY --chown=veracodesca:veracodesca . /home/veracodesca/VeracodeCommunitySCA/
-RUN cd VeracodeCommunitySCA/buildAndReleaseTask && npm install
+RUN cd VeracodeCommunitySCA/buildAndReleaseTask && npm install -g eslint \
+    tfx-cli \
+    typescript
 RUN cd VeracodeCommunitySCA && pip install --no-cache-dir --quiet -r requirements.txt
 
 CMD [ "bash" ]
