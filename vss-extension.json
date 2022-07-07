@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
-    "id": "VeracodeCommunityScaAdoExtensionTest",
-    "name": "Veracode Community SCA Azure DevOps Extension - Test",
+    "id": "VeracodeCommunityScaAdoExtension",
+    "name": "Veracode Community SCA Azure DevOps Extension",
     "version": "1.0.0",
     "publisher": "gattjoe",
     "targets": [
@@ -9,7 +9,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
-    "description": "Veracode Community SCA Azure DevOps Extension - Test",
+    "description": "Veracode Community SCA Azure DevOps Extension",
     "tags": [
         "Security",
         "Azure Pipelines",

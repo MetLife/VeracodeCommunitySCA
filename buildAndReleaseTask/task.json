@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "40716131-c8f4-43f1-8fe3-4abe7064e39e",
-    "name": "VeracodeCommunityScaAdoExtensionTest",
+    "id": "38e8063b-f535-4063-b9f4-9e5d065205db",
+    "name": "VeracodeCommunityScaAdoExtension",
     "friendlyName": "Veracode Community SCA Azure DevOps Extension",
     "description": "Veracode Community SCA Azure DevOps Extension",
     "helpMarkDown": "Email gattjoseph@hotmail.com for support.",
