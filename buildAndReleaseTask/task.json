@@ -21,7 +21,7 @@
         {
             "name": "scanType",
             "type": "pickList",
-            "options":{
+            "options": {
                 "image": "Docker Image",
                 "directory": "Path to Artifact(s)",
                 "url": "URL"
@@ -50,7 +50,7 @@
         {
             "name": "minCVSS",
             "type": "pickList",
-            "options":{
+            "options": {
                 "0": "0",
                 "1": "1",
                 "2": "2",
@@ -67,6 +67,13 @@
             "defaultValue": "5",
             "required": true,
             "helpMarkDown": "Minimum CVSS score to report on. Please note: full results are still sent to the Veracode cloud."
+        },
+        {
+            "name": "recursiveScan",
+            "type": "boolean",
+            "label": "Perform a recursive scan on the target.",
+            "defaultValue": true,
+            "helpMarkDown": "Perform a recursive scan on the target. Enabling this can help SCA correctly identify the target application stack."
         },
         {
             "name": "failBuild",

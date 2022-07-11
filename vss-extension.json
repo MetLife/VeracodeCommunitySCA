@@ -8,7 +8,7 @@
         {
             "id": "Microsoft.VisualStudio.Services"
         }
-    ],    
+    ],
     "description": "Veracode Community SCA Azure DevOps Extension",
     "tags": [
         "Security",
@@ -17,18 +17,18 @@
         "Software Composition Analysis",
         "Veracode",
         "SCA"
-      ],
+    ],
     "categories": [
         "Azure Pipelines"
     ],
     "links": {
         "support": {
-          "uri": "mailto:gattjoseph@hotmail.com"
+            "uri": "mailto:gattjoseph@hotmail.com"
         },
         "issues": {
             "uri": "https://github.com/MetLife/VeracodeCommunitySCA/issues"
         }
-      },
+    },
     "repository": {
         "type": "git",
         "uri": "https://github.com/MetLife/VeracodeCommunitySCA"
@@ -41,7 +41,8 @@
             "path": "buildAndReleaseTask"
         },
         {
-            "path": "images", "addressable": true
+            "path": "images",
+            "addressable": true
         }
     ],
     "content": {
