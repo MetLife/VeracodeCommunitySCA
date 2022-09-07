@@ -1,0 +1,35 @@
+name: Build Node
+
+env:
+  NODE_VERSION: 16
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
+
+      - name: Set up Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3.4.1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+          cache-dependency-path: buildAndReleaseTask/package-lock.json
+
+      - name: Install packages
+        run: npm ci
+        working-directory: buildAndReleaseTask
+
+      - name: Run lint
+        run: npm run lint
+        working-directory: buildAndReleaseTask
+
+      - name: Run build
+        run: npm run build
+        working-directory: buildAndReleaseTask
