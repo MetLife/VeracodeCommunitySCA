@@ -41,3 +41,4 @@
 - Version up all python and npm package dependencies
 - Pinned npm package dependencies
 - Move Node and Python CI to GitHub actions
+- Set minimum version of ADO agent to 2.144.0 for Node 10 environment
