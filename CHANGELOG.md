@@ -40,3 +40,4 @@
 - Removed Python 3.6 tests
 - Version up all python and npm package dependencies
 - Pinned npm package dependencies
+- Move Node and Python CI to GitHub actions
