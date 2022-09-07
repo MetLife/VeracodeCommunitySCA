@@ -1,4 +1,4 @@
-name: Build Node
+name: Build and lint Node
 
 env:
   NODE_VERSION: 16
