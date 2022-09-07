@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.7, 3.8, 3.9, 3.10]
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
       - name: Set up Python ${{ matrix.python-version }}
@@ -27,14 +27,3 @@ jobs:
       - name: Run tox
         run: |
           tox -e py
-      - name: Upload test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: pytest-results for ${{ matrix.python-version }}
-          path: '**/test-output.xml'
-      - name: Upload coverage results
-        uses: actions/upload-artifact@v3
-        with:
-          name: pytest-results for ${{ matrix.python-version }}
-          path: '**/coverage.xml'
-        if: ${{ always() }}
