@@ -90,6 +90,7 @@
             "helpMarkDown": "Enable this to output agent capabilites to stdout if you are having issues setting up your scan environment."
         }
     ],
+    "minimumAgentVersion": "2.144.0",
     "execution": {
         "Node10": {
             "target": "scascan.js"

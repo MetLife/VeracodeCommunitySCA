@@ -35,3 +35,10 @@
 - Added eslint to the project
 - Version up all npm package dependencies
 - Improved Error handling
+
+# v1.0.16
+- Removed Python 3.6 tests
+- Version up all python and npm package dependencies
+- Pinned npm package dependencies
+- Move Node and Python CI to GitHub actions
+- Set minimum version of ADO agent to 2.144.0 for Node 10 environment
